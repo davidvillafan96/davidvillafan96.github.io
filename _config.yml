@@ -270,7 +270,7 @@ jekyll-minifier:
   enabled: false
   compress_javascript: false
   compress_css: false
-  exclude: ["robots.txt"]
+  compress_html: false
 
 # -----------------------------------------------------------------------------
 # Terser
