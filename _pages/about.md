@@ -7,7 +7,6 @@ profile:
   image: prof_pic.jpg
   title: David Villafañe
 ---
-
 <div class="mb-5 font-jojy" style="color: #000000 !important; margin-top: 30px; max-width: 720px; margin-left: auto; margin-right: auto; text-align: center !important;">
   <p class="mb-3 text-paragraph">
 👨🏼‍🔬💻 I transform <strong class="jojy-bold">high-dimensional biological data</strong> into reproducible analytical frameworks to drive strategic decisions in <strong class="jojy-bold">Clinical Genomics</strong> and <strong class="jojy-bold">Biotechnology</strong>. My work treats biological systems as structured feature spaces, applying computational rigor to extract predictive insights from complex multi-omics landscapes.
