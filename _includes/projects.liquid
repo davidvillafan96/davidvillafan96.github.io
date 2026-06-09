@@ -1,0 +1,27 @@
+<div class="grid-item">
+  <div class="card hoverable">
+    {% if project.img %}
+      {% include figure.liquid path=project.img alt=project.title class="card-img-top" %}
+    {% endif %}
+    
+    <div class="card-body">
+      <h2 class="card-title">
+        <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="text-dark">
+          {{ project.title }}
+        </a>
+      </h2>
+      
+      <p class="card-text">{{ project.description }}</p>
+      
+      <div class="row ml-1 mr-1 p-0">
+        {% if project.github %}
+          <div class="github-icon">
+            <div class="icon" data-toggle="tooltip" title="GitHub Repository">
+              <a href="{{ project.github }}" target="_blank"><i class="fab fa-github gh-icon"></i></a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
