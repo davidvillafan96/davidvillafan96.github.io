@@ -17,6 +17,7 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
+          bundler: '2.5.2'  # Vamos a forzar esta versión que es estable y compatible
 
       - name: Install dependencies and Build
         run: |
