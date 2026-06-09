@@ -1,0 +1,14 @@
+name=_includes/pagination.liquid
+{% if paginator.total_pages > 1 %}
+  <nav class="pagination" role="navigation">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">← Anterior</a>
+    {% endif %}
+
+    <span class="page-number">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Siguiente →</a>
+    {% endif %}
+  </nav>
+{% endif %}
