@@ -16,21 +16,19 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: false # CAMBIO IMPORTANTE: Ponlo en false temporalmente
+          bundler-cache: false # Mantenemos false para evitar conflictos de versiones antiguas
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-          bundler-cache: false # Mantenemos esto en false para evitar el error de la v4.0.6
-
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
-          gem install bundler -v 2.5.2 # Instalamos una versión de Bundler compatible
-          bundle install # Instalamos las gemas manualmente
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
+          gem install bundler -v 2.5.2
+          bundle install
 
       - name: Build site
         run: |
+          export JEKYLL_ENV=production
+          export PAGES_REPO_NWO=${{ github.repository }}
           bundle exec jekyll build
 
       - name: Deploy
