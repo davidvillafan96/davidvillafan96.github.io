@@ -1,7 +1,10 @@
 ---
-layout: default
+layout: about
 title: about
 permalink: /
+nav: true
+nav_title: Inicio
+nav_order: 1
 ---
 <div class="mb-5 font-jojy" style="color: #000000 !important; margin-top: 30px; max-width: 720px; margin-left: auto; margin-right: auto; text-align: center !important;">
   <p class="mb-3 text-paragraph">
