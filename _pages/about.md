@@ -1,7 +1,7 @@
 ---
 layout: about
-title: About
-permalink: /about/
+title: about
+permalink: /
 ---
 <div class="mb-5 font-jojy" style="color: #000000 !important; margin-top: 30px; max-width: 720px; margin-left: auto; margin-right: auto; text-align: center !important;">
   <p class="mb-3 text-paragraph">
