@@ -27,6 +27,7 @@ jobs:
       - name: Build site
         run: |
           export JEKYLL_ENV=production
+          export PAGES_REPO_NWO=davidvillafan96/davidvillafan96.github.io
           bundle exec jekyll build
 
       - name: Deploy
