@@ -78,37 +78,6 @@ importance: 3
       Figure 3.0: High-throughput data preprocessing and modeling execution matrix.
     </div>
   </div>
-
-  <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-lg font-mono text-xs my-8">
-    <div class="bg-gray-50 px-4 py-3 text-gray-500 flex items-center justify-between border-b border-gray-200">
-      <div class="flex items-center gap-2">
-        <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block shadow-inner"></span>
-        <span class="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block shadow-inner"></span>
-        <span class="w-3 h-3 rounded-full bg-[#27c93f] inline-block shadow-inner"></span>
-        <span class="ml-2 text-gray-600 font-medium text-[11px] flex items-center gap-1.5 font-mono">
-          <i class="fa-solid fa-code text-indigo-500"></i> pipeline_preprocessing.R
-        </span>
-      </div>
-      <span class="text-[10px] bg-gray-200/60 px-2.5 py-0.5 rounded text-gray-600 font-semibold uppercase tracking-wider">Data Prep Block</span>
-    </div>
-{% highlight r %}
-# Feature Cleansing, One-Hot Encoding, and Near-Zero Variance Filtering
-cols_to_discard <- c("DATASET", "NLME_RESULT_ID", "NLME_CURVE_ID", "COSMIC_ID",
-                     "CELL_LINE_NAME", "SANGER_MODEL_ID", "DRUG_ID", "DRUG_NAME",
-                     "SYNONYMS", "WEBRELEASE", "COMPANY_ID", "PUTATIVE_TARGET", "PATHWAY_NAME")
-
-df_clean <- df_ml %>%
-  select(-any_of(cols_to_discard)) %>%
-  mutate(across(where(is.character), as.factor)) %>%
-  drop_na() %>%
-  select(where(~ n_distinct(.) > 1))
-
-# Convert to Dummy Variables & Standardize Matrix Space
-df_dummy <- model.matrix(~ . - 1, data = df_clean) %>% as.data.frame()
-preproc  <- preProcess(df_dummy, method = c("nzv", "center", "scale"))
-df_proc  <- predict(preproc, df_dummy)
-{% endhighlight %}
-  </div>
 </div>
 
 <div class="my-12 pt-8 border-t border-gray-100">
@@ -159,38 +128,6 @@ df_proc  <- predict(preproc, df_dummy)
   <div class="bg-blue-50/40 border border-blue-100 rounded-xl p-4 text-xs text-slate-700 leading-relaxed my-6">
     <h5 class="font-bold text-blue-900 mb-1 flex items-center gap-1"><i class="fa-solid fa-circle-info"></i> Bioinformatics Interpretation of RMSE</h5>
     Since the pharmacological target vectors were Z-score standardized ($\sigma = 1$), an <strong>RMSE < 1 (~0.88)</strong> proves that our algorithms capture true biological mechanisms rather than overfitting random technical noise within high-throughput screenings.
-  </div>
-
-  <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-lg font-mono text-xs my-6">
-    <div class="bg-gray-50 px-4 py-3 text-gray-500 flex items-center justify-between border-b border-gray-200">
-      <div class="flex items-center gap-2">
-        <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block shadow-inner"></span>
-        <span class="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block shadow-inner"></span>
-        <span class="w-3 h-3 rounded-full bg-[#27c93f] inline-block shadow-inner"></span>
-        <span class="ml-2 text-gray-600 font-medium text-[11px] flex items-center gap-1.5 font-mono">
-          <i class="fa-solid fa-code text-blue-500"></i> ensemble_regression.R
-        </span>
-      </div>
-      <span class="text-[10px] bg-gray-200/60 px-2.5 py-0.5 rounded text-gray-600 font-semibold uppercase tracking-wider">Regression Block</span>
-    </div>
-{% highlight r %}
-# Partition Training and Testing Spaces for Continuous Targets
-y_reg <- df_proc$LN_IC50_scaled
-idx_reg <- createDataPartition(y_reg, p = 0.8, list = FALSE)
-X_train_reg <- X_data[idx_reg, ]; X_test_reg <- X_data[-idx_reg, ]
-y_train_reg <- y_reg[idx_reg];     y_test_reg <- y_reg[-idx_reg]
-
-# Model 1: Random Forest
-rf_reg  <- randomForest(x = X_train_reg, y = y_train_reg, ntree = 100)
-pred_rf <- predict(rf_reg, X_test_reg)
-
-# Model 2: eXtreme Gradient Boosting (XGBoost)
-dtrain <- xgb.DMatrix(data = as.matrix(X_train_reg), label = y_train_reg)
-dtest  <- xgb.DMatrix(data = as.matrix(X_test_reg), label = y_test_reg)
-params <- list(objective = "reg:squarederror", eta = 0.1, max_depth = 6, subsample = 0.8)
-xgb_reg  <- xgb.train(params = params, data = dtrain, nrounds = 150)
-pred_xgb <- predict(xgb_reg, dtest)
-{% endhighlight %}
   </div>
 </div>
 
@@ -258,38 +195,6 @@ pred_xgb <- predict(xgb_reg, dtest)
         * Every multi-class pipeline architecture underwent rigorous confusion matrix evaluation via stratified test folds.
       </div>
     </div>
-  </div>
-
-  <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-lg font-mono text-xs my-6">
-    <div class="bg-gray-50 px-4 py-3 text-gray-500 flex items-center justify-between border-b border-gray-200">
-      <div class="flex items-center gap-2">
-        <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block shadow-inner"></span>
-        <span class="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block shadow-inner"></span>
-        <span class="w-3 h-3 rounded-full bg-[#27c93f] inline-block shadow-inner"></span>
-        <span class="ml-2 text-gray-600 font-medium text-[11px] flex items-center gap-1.5 font-mono">
-          <i class="fa-solid fa-code text-purple-500"></i> classification_tuning.R
-        </span>
-      </div>
-      <span class="text-[10px] bg-gray-200/60 px-2.5 py-0.5 rounded text-gray-600 font-semibold uppercase tracking-wider">Classification & Tuning</span>
-    </div>
-{% highlight r %}
-# Define Categorical Target (Q25 Thresholding) and Orthogonal PCA Transformation
-q25_threshold <- quantile(df_proc$LN_IC50_scaled, 0.25, na.rm = TRUE)
-y_clf         <- as.factor(ifelse(df_proc$LN_IC50_scaled <= q25_threshold, 1, 0))
-
-pca_res       <- prcomp(X_train_clf, center = TRUE, scale. = TRUE)
-var_explained <- cumsum(pca_res$sdev^2) / sum(pca_res$sdev^2)
-n_comp        <- which(var_explained >= 0.95)[1]
-
-X_train_pca   <- predict(pca_res, X_train_clf)[, 1:n_comp]
-X_test_pca    <- predict(pca_res, X_test_clf)[, 1:n_comp]
-
-# Stratified Cross-Validation & Grid Optimization for Random Forest
-control  <- trainControl(method = "cv", number = 5)
-tunegrid <- expand.grid(.mtry = c(3, 5, 10))
-tuned_rf <- train(x = X_train_bal, y = y_train_bal, method = "rf", 
-                  trControl = control, tuneGrid = tunegrid, ntree = 100)
-{% endhighlight %}
   </div>
 </div>
 
