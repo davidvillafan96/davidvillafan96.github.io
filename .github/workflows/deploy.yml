@@ -16,14 +16,15 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: false # Mantenemos false para evitar conflictos de versiones antiguas
+          bundler-cache: false # Desactivado temporalmente para permitir resolver dependencias desde cero
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
-          gem install bundler -v 2.5.2
-          bundle install
+          gem install bundler -v 2.4.22 # Usamos una versión de bundler muy estable
+          bundle update --bundler # Actualiza bundler
+          bundle install # Esto generará un Gemfile.lock nuevo y limpio
 
       - name: Build site
         run: |
