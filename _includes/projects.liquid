@@ -1,27 +1,27 @@
-<div class="grid-item">
-  <div class="card hoverable">
-    {% if project.img %}
-      {% include figure.liquid path=project.img alt=project.title class="card-img-top" %}
-    {% endif %}
-    
-    <div class="card-body">
-      <h2 class="card-title">
-        <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="text-dark">
+{% assign sorted_projects = site.projects | sort: "importance" %}
+
+<div class="w-full flex flex-col items-center space-y-3 my-8 font-sans">
+  {% for project in sorted_projects %}
+    <a href="{{ project.url | relative_url }}" class="w-full max-w-[750px] block no-underline transition-all duration-200 hover:scale-[1.015] hover:opacity-95">
+      
+      <div class="w-full text-white px-6 py-3 rounded-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 shadow-sm text-center sm:text-left" 
+           style="background-color: {{ project.bg_color | default: '#b3b5fc' }}; border: none;">
+        
+        <span class="font-bold text-base flex items-center justify-center sm:justify-start gap-2">
+          {% if project.icon %}
+            <i class="{{ project.icon }}"></i>
+          {% else %}
+            <i class="fa-solid fa-flask"></i>
+          {% endif %}
           {{ project.title }}
-        </a>
-      </h2>
-      
-      <p class="card-text">{{ project.description }}</p>
-      
-      <div class="row ml-1 mr-1 p-0">
-        {% if project.github %}
-          <div class="github-icon">
-            <div class="icon" data-toggle="tooltip" title="GitHub Repository">
-              <a href="{{ project.github }}" target="_blank"><i class="fab fa-github gh-icon"></i></a>
-            </div>
-          </div>
-        {% endif %}
+        </span>
+        
+        <span class="text-sm font-medium opacity-95 tracking-wide">
+          {{ project.description }}
+        </span>
+        
       </div>
-    </div>
-  </div>
+
+    </a>
+  {% endfor %}
 </div>
