@@ -1,0 +1,294 @@
+---
+layout: page
+title: "Project 3: Machine Learning for Drug Response Prediction"
+description: "From Statistical Foundations to Multi-Algorithmic Predictive Systems in Tabular Oncology"
+bg_color: "#1e1b4b"
+icon: "fa-solid fa-brain"
+importance: 3
+---
+
+<div class="mb-12 border-b border-gray-100 pb-8">
+  <div class="bg-gradient-to-r from-indigo-950 to-slate-900 border-l-4 border-violet-500 p-6 rounded-r-xl mb-8 shadow-sm">
+    <h2 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+      <i class="fa-solid fa-bullseye text-violet-400"></i> Project Objective
+    </h2>
+    <p class="text-indigo-200/90 leading-relaxed text-sm">
+      Transitioning from exploratory analytics into <strong>predictive modeling</strong>. This phase implements robust machine learning pipelines to map complex multi-lineage molecular patterns into continuous pharmacological response metrics ($LN(IC_{50})$) and stratified clinical classification spaces.
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2 text-[11px] font-mono text-violet-300">
+      <span class="bg-white/10 px-2.5 py-1 rounded-full border border-white/10">Dual-Core Architecture (Reg/Clf)</span>
+      <span class="bg-white/10 px-2.5 py-1 rounded-full border border-white/10">Dimensionality Compression (PCA)</span>
+      <span class="bg-white/10 px-2.5 py-1 rounded-full border border-white/10">Cross-Validation Tuning</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+    <div class="bg-gray-50 border border-gray-100 p-4 rounded-xl text-center opacity-60">
+      <span class="text-[10px] font-mono text-gray-400 block mb-1">PHASE 1</span>
+      <h4 class="font-bold text-gray-700 text-xs">Data Engineering & Integration</h4>
+    </div>
+    <div class="bg-gray-50 border border-gray-100 p-4 rounded-xl text-center opacity-60">
+      <span class="text-[10px] font-mono text-gray-400 block mb-1">PHASE 2</span>
+      <h4 class="font-bold text-gray-700 text-xs">Statistical Inference & EDA</h4>
+    </div>
+    <div class="bg-indigo-950 text-white p-4 rounded-xl text-center shadow-md ring-1 ring-violet-500/30">
+      <span class="text-[10px] font-mono text-violet-400 font-bold block mb-1">CURRENT MILESTONE</span>
+      <h4 class="font-bold text-indigo-100 text-xs">Project 3: Predictive Modeling</h4>
+    </div>
+  </div>
+</div>
+
+<div class="my-12">
+  <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-2 flex items-center gap-2">
+    <i class="fa-solid fa-network-wired text-indigo-600"></i> End-to-End Machine Learning Workflow
+  </h2>
+  <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+    El siguiente mapa metodológico describe la transformación de la matriz cruda <code class="bg-gray-100 px-1 py-0.5 rounded text-xs font-mono">GDSC_ML_Ready.csv</code> a través de filtros de varianza, proyecciones ortogonales y balanceo de clases hasta la evaluación predictiva.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+    <div class="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:border-indigo-200 transition-colors">
+      <div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 mb-3 font-mono font-bold text-xs">01</div>
+      <h4 class="font-bold text-gray-900 text-sm mb-1">Feature Cleansing</h4>
+      <p class="text-[11px] text-gray-500 leading-normal">Exclusión de metadatos no informativos e identificadores clínicos. Elenco de variables categóricas transformadas en factores estructurales.</p>
+    </div>
+
+    <div class="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:border-indigo-200 transition-colors">
+      <div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 mb-3 font-mono font-bold text-xs">02</div>
+      <h4 class="font-bold text-gray-900 text-sm mb-1">Dummy Encoding & NZV</h4>
+      <p class="text-[11px] text-gray-500 leading-normal">Expansión de la matriz vía <code>model.matrix</code>. Filtrado estricto por varianza cercana a cero (NZV), centrado y escalado unitario.</p>
+    </div>
+
+    <div class="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:border-indigo-200 transition-colors">
+      <div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 mb-3 font-mono font-bold text-xs">03</div>
+      <h4 class="font-bold text-gray-900 text-sm mb-1">Dual-Core Partition</h4>
+      <p class="text-[11px] text-gray-500 leading-normal">Bifurcación del pipeline: Regresión continua ($LN(IC_{50})$) y Clasificación binaria adaptativa fijada en el umbral del cuartil inferior (Q25).</p>
+    </div>
+
+    <div class="bg-white border border-violet-100 bg-violet-50/10 p-5 rounded-xl shadow-sm">
+      <div class="w-8 h-8 rounded-lg bg-violet-100 flex items-center justify-center text-violet-600 mb-3 font-mono font-bold text-xs">04</div>
+      <h4 class="font-bold text-gray-900 text-sm mb-1">PCA & Class Balance</h4>
+      <p class="text-[11px] text-gray-600 leading-normal">Reducción dimensional por PCA reteniendo el 95% de varianza. Downsampling simétrico (7,500/grupo) para neutralizar el sesgo biológico.</p>
+    </div>
+  </div>
+
+  <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[850px] mx-auto">
+    <img src="{{ '/assets/img/gdsc2_ml/Project3_workflow.png' | relative_url }}" alt="GDSC2 ML Pipeline Execution" class="w-full h-auto rounded-xl">
+    <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
+      Figure 3.0: Diagrama de flujo del procesamiento y optimización de hiperparámetros en paralelo.
+    </div>
+  </div>
+</div>
+
+<div class="my-12 pt-8 border-t border-gray-100">
+  <div class="flex flex-col md:flex-row md:items-center justify-between mb-6">
+    <div>
+      <h2 class="text-2xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
+        <i class="fa-solid fa-chart-line text-blue-500"></i> Regression Suite: Continuous Efficacy Modeling
+      </h2>
+      <p class="text-xs text-gray-500 mt-1">Evaluación de algoritmos de ensamble sobre el espacio predictivo continuo de $LN(IC_{50})$</p>
+    </div>
+    
+    <div class="mt-4 md:mt-0 bg-slate-100 border text-slate-700 font-mono text-[11px] px-3 py-1.5 rounded-lg flex items-center gap-2 self-start md:self-auto">
+      <i class="fa-solid fa-database text-slate-400"></i> <strong>N Subsample:</strong> 30,000 matrices / 56 predictors
+    </div>
+  </div>
+
+  
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+    <div class="bg-gradient-to-br from-white to-slate-50/50 border border-gray-100 p-6 rounded-2xl shadow-sm relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-xl"></div>
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-xs font-mono font-bold text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-full">Primary Architecture</span>
+        <h3 class="font-bold text-gray-900 text-sm">XGBoost Regressor</h3>
+      </div>
+      <div class="flex items-baseline gap-2 mb-2">
+        <span class="text-3xl font-extrabold text-slate-900 font-mono">0.881</span>
+        <span class="text-xs text-gray-400 font-mono font-semibold">Test RMSE</span>
+      </div>
+      <p class="text-xs text-gray-600 leading-relaxed">
+        Máxima capacidad predictiva en matrices tabulares densas. El algoritmo captura eficientemente interacciones no lineales complejas entre las vías biológicas sin colapsar ante el ruido inherente del cribado celular.
+      </p>
+    </div>
+
+    <div class="bg-gradient-to-br from-white to-slate-50/50 border border-gray-100 p-6 rounded-2xl shadow-sm relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl"></div>
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-xs font-mono font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">Baseline Comparison</span>
+        <h3 class="font-bold text-gray-900 text-sm">Random Forest</h3>
+      </div>
+      <div class="flex items-baseline gap-2 mb-2">
+        <span class="text-3xl font-extrabold text-slate-900 font-mono">0.882</span>
+        <span class="text-xs text-gray-400 font-mono font-semibold">Test RMSE</span>
+      </div>
+      <p class="text-xs text-gray-600 leading-relaxed">
+        Estabilidad algorítmica robusta. La mínima convergencia de error respecto a XGBoost confirma que el patrón predictivo estructural está consolidado y no depende del sobreajuste estocástico de un único modelo.
+      </p>
+    </div>
+  </div>
+
+  <div class="bg-blue-50/40 border border-blue-100 rounded-xl p-4 text-xs text-slate-700 leading-relaxed">
+    <h5 class="font-bold text-blue-900 mb-1 flex items-center gap-1"><i class="fa-solid fa-circle-info"></i> Interpretación Bioinformática del RMSE</h5>
+    Considerando que las variables de respuesta fenotípica fueron estandarizadas de forma unitaria ($\sigma = 1$), un **RMSE < 1 (~0.88)** certifica que los modelos están abstrayendo señales biológicas genuinas a partir de las ontologías de vías moleculares evaluadas, superando holgadamente la varianza por ruido técnico de los ensayos a gran escala.
+  </div>
+</div>
+
+<div class="my-12 pt-8 border-t border-gray-100">
+  <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-2 flex items-center gap-2">
+    <i class="fa-solid fa-vial-circle-check text-purple-600"></i> Classification Benchmarking & Clinical Framing
+  </h2>
+  <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+    Transformación de la escala continua en decisiones clínicas binarias. Al aislar el percentil de hiper-sensibilidad terapéutica (Q25), evaluamos múltiples arquitecturas predictivas sobre el espacio latente reducido por PCA.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+    
+    <div class="md:col-span-1 space-y-4">
+      <div class="bg-purple-950 text-white p-5 rounded-2xl shadow-sm border border-purple-900">
+        <span class="text-[10px] uppercase tracking-widest text-purple-300 font-mono block">PCA Latent Space</span>
+        <div class="text-xl font-bold font-mono mt-1">95% Variance</div>
+        <p class="text-[11px] text-purple-200/80 mt-2 leading-relaxed">Componentes ortogonales óptimos seleccionados mediante el criterio de acumulación espectral para compactar los predictores de fenotipos moleculares.</p>
+      </div>
+
+      <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-sm border border-slate-800">
+        <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono block">Subsampling Balance</span>
+        <div class="text-xl font-bold font-mono mt-1">1:1 Balanced Space</div>
+        <div class="mt-2 text-[11px] font-mono text-slate-300 space-y-0.5">
+          <div>• Res/Int Class: 7,500 samples</div>
+          <div>• Sensitive Class: 7,500 samples</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:col-span-2 border border-gray-100 rounded-2xl bg-white shadow-sm overflow-hidden">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-gray-50 border-b border-gray-100 text-[11px] font-mono font-bold text-gray-500 uppercase tracking-wider">
+            <th class="p-4">Algorithm Tested</th>
+            <th class="p-4">Dimensional Space</th>
+            <th class="p-4">Optimization Mode</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-50 text-xs">
+          <tr>
+            <td class="p-4 font-semibold text-gray-900">Logistic Regression (GLM)</td>
+            <td class="p-4 font-mono text-gray-600">PCA Coordinates</td>
+            <td class="p-4 text-gray-500">Asymptotic Binomial Logit</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-semibold text-gray-900">Support Vector Machines (SVM)</td>
+            <td class="p-4 font-mono text-gray-600">PCA Coordinates</td>
+            <td class="p-4 text-gray-500">Linear Hyperplane Split (Cost = 1)</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-semibold text-gray-900">k-Nearest Neighbors (k-NN)</td>
+            <td class="p-4 font-mono text-gray-600">PCA Coordinates</td>
+            <td class="p-4 text-gray-500">Instance Neighborhood (k = 7)</td>
+          </tr>
+          <tr class="bg-violet-50/20">
+            <td class="p-4 font-semibold text-indigo-950 flex items-center gap-1.5">
+              Random Forest Classifier <i class="fa-solid fa-circle-check text-indigo-600 text-[10px]"></i>
+            </td>
+            <td class="p-4 font-mono text-indigo-900">PCA Coordinates</td>
+            <td class="p-4 text-indigo-700 font-medium">Grid & Random Hyperparameter Search</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="p-3 bg-gray-50 text-[10px] font-mono text-gray-400 border-t border-gray-100">
+        * Todos los modelos de clasificación fueron validados mediante matrices de confusión cruzadas basadas en remuestreos balanceados.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="my-12 pt-8 border-t border-gray-100">
+  <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-6 flex items-center gap-2">
+    <i class="fa-solid fa-hospital-user text-teal-600"></i> Translational Impact & Business Case
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-white shadow-sm">
+      <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600 shrink-0">
+        <i class="fa-solid fa-sliders"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Clinical Decision Support Systems (CDSS)</h4>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          Funciona como un motor de cribado terapéutico inteligente, mapeando perfiles ómicos moleculares crudos del paciente para filtrar cientos de opciones terapéuticas hacia candidatos óptimos de alta sensibilidad.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-white shadow-sm">
+      <div class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 shrink-0">
+        <i class="fa-solid fa-dna"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Oncología Personalizada Dirigida</h4>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          Sustituye esquemas generalizados por asignaciones de fármacos de precisión. El modelo identifica de forma predictiva los campos de resistencia molecular intrínseca antes del inicio del tratamiento clínico.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-white shadow-sm">
+      <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
+        <i class="fa-solid fa-flask"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Aceleración de I+D (Screening In Silico)</h4>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          Permite evaluar computacionalmente miles de interacciones compuesto-célula tumorales en segundos, reduciendo drásticamente los costos operativos de ensayos húmedos pesados y acortando los ciclos de desarrollo farmacológico.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-white shadow-sm">
+      <div class="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 shrink-0">
+        <i class="fa-solid fa-magnifying-glass-chart"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Descubrimiento Mecanístico de Biomarcadores</h4>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          A través del análisis de la importancia de las variables (Feature Importance), el modelo trasciende la mera predicción de caja negra, revelando las rutas e hitos moleculares que configuran la sensibilidad tumoral.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="my-12 pt-6 border-t border-gray-100">
+  <h3 class="font-bold text-gray-900 text-xs mb-4 uppercase tracking-wider font-mono text-gray-400">Core Pipeline Technology Stack</h3>
+  <div class="flex flex-wrap gap-2 text-[10px] font-mono text-gray-600">
+    <span class="bg-gray-100 px-2.5 py-1 rounded border">R Core Engine</span>
+    <span class="bg-gray-100 px-2.5 py-1 rounded border">caret (Resampling Suite)</span>
+    <span class="bg-gray-100 px-2.5 py-1 rounded border">xgboost</span>
+    <span class="bg-gray-100 px-2.5 py-1 rounded border">randomForest</span>
+    <span class="bg-gray-100 px-2.5 py-1 rounded border">e1071 (SVM Kernels)</span>
+    <span class="bg-gray-100 px-2.5 py-1 rounded border">Metrics (RMSE Optimization)</span>
+  </div>
+</div>
+
+<div class="my-12 bg-gradient-to-r from-slate-900 to-indigo-950 text-white rounded-2xl p-8 relative overflow-hidden shadow-xl border border-white/5">
+  <div class="relative z-10 max-w-2xl">
+    <span class="text-[10px] font-bold uppercase tracking-widest text-indigo-300 bg-indigo-900/60 px-2.5 py-1 rounded-full border border-indigo-800">Next Horizon</span>
+    <h3 class="text-2xl font-bold text-white mt-4 mb-2">Integrating Genomic Variation & Mutation Signatures</h3>
+    <p class="text-indigo-200/80 text-xs leading-relaxed mb-6">
+      A pesar del rendimiento predictivo alcanzado mediante ontologías de vías biológicas, la varianza inexplicada remanente exige la adición de determinantes de genómica estructural. El **Proyecto 4** expandirá esta arquitectura integrando paneles mutacionales de variantes individuales y firmas de mutación a gran escala.
+    </p>
+    <div class="text-xs font-semibold text-violet-400 flex items-center gap-1">
+      Evolution: Statistical Associations <i class="fa-solid fa-arrow-right text-[10px]"></i> Machine Learning <i class="fa-solid fa-arrow-right text-[10px]"></i> Integrated Multi-Omic Discovery
+    </div>
+  </div>
+  <div class="absolute right-4 bottom-4 opacity-5 text-9xl pointer-events-none hidden md:block">
+    <i class="fa-solid fa-dna"></i>
+  </div>
+</div>
+
+---
+
+### 👤 Author
+
+**David Villafañe, PhD** *Biological Sciences · Genomics · Computational Biology* [<i class="fa-brands fa-linkedin"></i> LinkedIn](https://www.linkedin.com/in/davidvillafanie/) · [<i class="fa-brands fa-github"></i> GitHub](https://github.com/davidvillafan96)
