@@ -97,13 +97,13 @@ importance: 2
   </p>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-    <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
-      <img src="{{ '/assets/img/gdsc2_eda/correlation_1.png' | relative_url }}" alt="Correlation Matrices" class="w-full h-auto rounded-lg">
-    </div>
-    <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
-      <img src="{{ '/assets/img/gdsc2_eda/metrics_consistency.png' | relative_url }}" alt="Metrics Alignment" class="w-full h-auto rounded-lg">
-    </div>
+  <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
+    <img src="{{ '/assets/img/gdsc2_eda/correlation_structure.png' | relative_url }}" alt="Correlation Matrices" class="w-full h-auto rounded-lg">
   </div>
+  <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
+    <img src="{{ '/assets/img/gdsc2_eda/metrics_consistency.png' | relative_url }}" alt="Metrics Alignment" class="w-full h-auto rounded-lg">
+  </div>
+</div>
 
   <blockquote>
     <strong>Machine learning does not discover structure — it learns it.</strong> If the feature metrics show non-linear saturation patterns here, linear algorithms will fail downstream.
