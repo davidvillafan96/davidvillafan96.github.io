@@ -40,6 +40,7 @@ al_folio:
   tailwind:
     version: 4.1.18
     preflight: false
+    css_entry: assets/css/main.css
   distill:
     engine: distillpub-template
     source: al-org-dev/distill-template#al-folio
