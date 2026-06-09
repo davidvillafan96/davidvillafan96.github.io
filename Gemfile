@@ -10,5 +10,4 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'jekyll-feed'
   gem 'jemoji'
-  gem 'jekyll-minifier'
 end
