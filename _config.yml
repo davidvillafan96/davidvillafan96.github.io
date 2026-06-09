@@ -178,7 +178,7 @@ newsletter:
 collections:
   pages:
     output: true
-    permalink: /:stub/
+    permalink: /:title/
   news:
     defaults:
       layout: post
