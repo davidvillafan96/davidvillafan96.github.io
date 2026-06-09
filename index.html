@@ -1,592 +1,682 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> You R. Name </title> <meta name="author" content="You R. Name"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
-  :root {
-    --max-content-width: 930px;
-  }
-</style> <link rel="stylesheet" href="/al-folio/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/al-folio/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/al-folio/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://alshedivat.github.io/al-folio/"> <script src="/al-folio/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/al-folio/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
-    initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/al-folio/">about <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/al-folio/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/al-folio/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/al-folio/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/al-folio/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/al-folio/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/al-folio/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/al-folio/people/">people </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">submenus </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/al-folio/books/">bookshelf</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/al-folio/blog/">blog</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="font-weight-bold">You</span> R. Name </h1> <p class="desc"><a href="#">Affiliations</a>. Address. Contacts. Motto. Etc.</p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/al-folio/assets/img/prof_pic-480.webp 480w,/al-folio/assets/img/prof_pic-800.webp 800w,/al-folio/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw"> <img src="/al-folio/assets/img/prof_pic.jpg?v=974957d202f671e4fa6700c04e68deae" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="more-info"> <p>555 your office number</p> <p>123 your address street</p> <p>Your City, State 12345</p> </div> </div> <div class="clearfix"> <p>Write your biography here. Tell the world about yourself. Link to your favorite <a href="https://www.reddit.com" rel="external nofollow noopener" target="_blank">subreddit</a>. You can put a picture in, too. The code is already in, just name your picture <code class="language-plaintext highlighter-rouge">prof_pic.jpg</code> and put it in the <code class="language-plaintext highlighter-rouge">img/</code> folder.</p> <p>Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing <code class="language-plaintext highlighter-rouge">profile</code> property of the YAML header of your <code class="language-plaintext highlighter-rouge">_pages/about.md</code>. Edit <code class="language-plaintext highlighter-rouge">_bibliography/papers.bib</code> and Jekyll will render your <a href="/al-folio/publications/">publications page</a> automatically.</p> <p>Link to your social media connections, too. This theme is set up to use <a href="https://fontawesome.com/" rel="external nofollow noopener" target="_blank">Font Awesome icons</a> and <a href="https://jpswalsh.github.io/academicons/" rel="external nofollow noopener" target="_blank">Academicons</a>, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.</p> </div> <h2> <a href="/al-folio/news/" style="color: inherit">news</a> </h2> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">Jan 15, 2016</th> <td> A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20"> </td> </tr> <tr> <th scope="row" style="width: 20%">Nov 07, 2015</th> <td> <a class="news-title" href="/al-folio/news/announcement_2/">A long announcement with details</a> </td> </tr> <tr> <th scope="row" style="width: 20%">Oct 22, 2015</th> <td> A simple inline announcement. </td> </tr> </table> </div> </div> <h2> <a href="/al-folio/blog/" style="color: inherit">latest posts</a> </h2> <div class="news"> <div class="table-responsive" style="max-height: 60vw"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">Mar 26, 2025</th> <td> <a class="news-title" href="/al-folio/blog/2025/plotly/">a post with plotly.js</a> </td> </tr> <tr> <th scope="row" style="width: 20%">Dec 04, 2024</th> <td> <a class="news-title" href="/al-folio/blog/2024/photo-gallery/">a post with image galleries</a> </td> </tr> <tr> <th scope="row" style="width: 20%">May 14, 2024</th> <td> <a class="news-title" href="https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/" target="_blank" rel="external nofollow noopener">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</a> <svg width="2rem" height="2rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </td> </tr> </table> </div> </div> <h2> <a href="/al-folio/publications/" style="color: inherit">selected publications</a> </h2> <div class="publications"> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100"> <a href="https://journals.aps.org/" rel="external nofollow noopener" target="_blank">PhysRev</a> </abbr> </div> <div id="PhysRev.47.777" class="col-sm-8"> <div class="title">Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?</div> <div class="author"> <em>A. Einstein<sup>*†</sup></em>, <a href="https://en.wikipedia.org/wiki/Boris_Podolsky" rel="external nofollow noopener" target="_blank">B. Podolsky<sup>*</sup></a>, and <a href="https://en.wikipedia.org/wiki/Nathan_Rosen" rel="external nofollow noopener" target="_blank">N. Rosen<sup>*</sup></a> <i class="fa-solid fa-circle-info ml-1" data-toggle="popover" data-placement="top" data-html="true" data-content="* Example use of superscripts&lt;br&gt;† Albert Einstein"> </i> </div> <div class="periodical"> <em>Phys. Rev.</em>, New Jersey. <em>More Information</em> can be <a href="https://github.com/alshedivat/al-folio/" rel="external nofollow noopener" target="_blank">found here</a> , May 1935 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1103/PhysRev.47.777" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="/al-folio/assets/pdf/example_pdf.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a> <a href="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Video</a> </div> <div class="badges"> <span class="altmetric-embed" data-badge-type="2" data-badge-popover="right" data-altmetric-id="248277"></span> <span class="__dimensions_badge_embed__" data-doi="10.1103/PhysRev.47.777" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span> <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=qc6CJjYAAAAJ&amp;citation_for_view=qc6CJjYAAAAJ:qyhmnyLat1gC" aria-label="Google Scholar link" role="button" rel="external nofollow noopener" target="_blank"> <img src="https://img.shields.io/badge/scholar-27746-4285F4?logo=googlescholar&amp;labelColor=beige" alt="27746 Google Scholar citations"> </a> <a href="https://inspirehep.net/literature/3255" aria-label="Inspirehep link" role="button" rel="external nofollow noopener" target="_blank"> <img src="https://img.shields.io/badge/inspire-8.7K-001628?logo=inspire&amp;logoColor=001628&amp;labelColor=beige" alt="8.7K InspireHEP citations"> </a> </div> <div class="abstract hidden"> <p>In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.</p> </div> </div> </div> </li></ol> </div> <div class="social"> <div class="contact-icons"> <a href="/al-folio/assets/pdf/example_pdf.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:you@example.com" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://inspirehep.net/authors/1010907" title="Inspirehep id" rel="external nofollow noopener" target="_blank"><i class="ai ai-inspire"></i></a> <a href="/al-folio/feed.xml" title="Rss icon"><i class="fa-solid fa-square-rss"></i></a> <a href="https://scholar.google.com/citations?user=qc6CJjYAAAAJ" title="Scholar userid" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a> <a href="https://www.alberteinstein.com/" title="Custom Social" rel="external nofollow noopener" target="_blank"><img src="https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png" alt="Custom Social"></a> </div> <div class="contact-note">You can even add a little note about which of these is the best way to reach you. </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 You R. Name. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
-  window.alFolio = {
-    compatBootstrap: false
-  };
-</script> <script src="/al-folio/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/al-folio/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/al-folio/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/al-folio/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/al-folio/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/al-folio/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/al-folio/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/al-folio/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/al-folio/assets/al_img_tools/js/zoom.js"></script> <script defer src="/al-folio/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
-    addBackToTop();
-  </script> <script type="module" src="/al-folio/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/al-folio/assets/al_search/js/search-setup.js"></script> <script>
-// get the ninja-keys element
-const ninja = document.querySelector('ninja-keys');
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-// add the home and posts menu items
-ninja.data = [{
-    id: "nav-about",
-    title: "about",
-    section: "Navigation",
-    handler: () => {
-      window.location.href = "/al-folio/";
-    },
-  },{id: "nav-blog",
-          title: "blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/al-folio/blog/";
-          },
-        },{id: "nav-publications",
-          title: "publications",
-          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/al-folio/publications/";
-          },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/al-folio/projects/";
-          },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/al-folio/repositories/";
-          },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/al-folio/cv/";
-          },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/al-folio/teaching/";
-          },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/al-folio/people/";
-          },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/al-folio/books/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/al-folio/blog/";
-              },
-            },{id: "post-a-post-with-plotly-js",
-        
-          title: "a post with plotly.js",
-        
-        description: "this is what included plotly.js code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2025/plotly/";
-          
-        },
-      },{id: "post-a-post-with-image-galleries",
-        
-          title: "a post with image galleries",
-        
-        description: "this is what included image galleries could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/photo-gallery/";
-          
-        },
-      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-a-post-with-tabs",
-        
-          title: "a post with tabs",
-        
-        description: "this is what included tabs in a post could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/tabs/";
-          
-        },
-      },{id: "post-a-post-with-typograms",
-        
-          title: "a post with typograms",
-        
-        description: "this is what included typograms code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/typograms/";
-          
-        },
-      },{id: "post-a-post-that-can-be-cited",
-        
-          title: "a post that can be cited",
-        
-        description: "this is what a post that can be cited looks like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/post-citation/";
-          
-        },
-      },{id: "post-a-post-with-pseudo-code",
-        
-          title: "a post with pseudo code",
-        
-        description: "this is what included pseudo code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/pseudocode/";
-          
-        },
-      },{id: "post-a-post-with-code-diff",
-        
-          title: "a post with code diff",
-        
-        description: "this is how you can display code diffs",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/code-diff/";
-          
-        },
-      },{id: "post-a-post-with-advanced-image-components",
-        
-          title: "a post with advanced image components",
-        
-        description: "this is what advanced image components could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/advanced-images/";
-          
-        },
-      },{id: "post-a-post-with-vega-lite",
-        
-          title: "a post with vega lite",
-        
-        description: "this is what included vega lite code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/vega-lite/";
-          
-        },
-      },{id: "post-a-post-with-geojson",
-        
-          title: "a post with geojson",
-        
-        description: "this is what included geojson code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/geojson-map/";
-          
-        },
-      },{id: "post-a-post-with-echarts",
-        
-          title: "a post with echarts",
-        
-        description: "this is what included echarts code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/echarts/";
-          
-        },
-      },{id: "post-a-post-with-chart-js",
-        
-          title: "a post with chart.js",
-        
-        description: "this is what included chart.js code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2024/chartjs/";
-          
-        },
-      },{id: "post-a-post-with-tikzjax",
-        
-          title: "a post with TikZJax",
-        
-        description: "this is what included TikZ code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/tikzjax/";
-          
-        },
-      },{id: "post-a-post-with-bibliography",
-        
-          title: "a post with bibliography",
-        
-        description: "an example of a blog post with bibliography",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/post-bibliography/";
-          
-        },
-      },{id: "post-a-post-with-jupyter-notebook",
-        
-          title: "a post with jupyter notebook",
-        
-        description: "an example of a blog post with jupyter notebook",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/jupyter-notebook/";
-          
-        },
-      },{id: "post-a-post-with-custom-blockquotes",
-        
-          title: "a post with custom blockquotes",
-        
-        description: "an example of a blog post with custom blockquotes",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/custom-blockquotes/";
-          
-        },
-      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
-        
-          title: "a post with table of contents on a sidebar",
-        
-        description: "an example of a blog post with table of contents on a sidebar",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/sidebar-table-of-contents/";
-          
-        },
-      },{id: "post-a-post-with-audios",
-        
-          title: "a post with audios",
-        
-        description: "this is what included audios could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/audios/";
-          
-        },
-      },{id: "post-a-post-with-videos",
-        
-          title: "a post with videos",
-        
-        description: "this is what included videos could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/videos/";
-          
-        },
-      },{id: "post-displaying-beautiful-interactive-tables",
-        
-          title: "displaying beautiful interactive tables",
-        
-        description: "an example of how to use interactive tables in al-folio",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/tables/";
-          
-        },
-      },{id: "post-a-post-with-table-of-contents",
-        
-          title: "a post with table of contents",
-        
-        description: "an example of a blog post with table of contents",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2023/table-of-contents/";
-          
-        },
-      },{id: "post-a-post-with-giscus-comments",
-        
-          title: "a post with giscus comments",
-        
-        description: "an example of a blog post with giscus comments",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2022/giscus-comments/";
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
-          
-        },
-      },{id: "post-a-post-with-redirect",
-        
-          title: "a post with redirect",
-        
-        description: "you can also redirect to assets like pdf",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/assets/pdf/example_pdf.pdf";
-          
-        },
-      },{id: "post-a-post-with-diagrams",
-        
-          title: "a post with diagrams",
-        
-        description: "an example of a blog post with diagrams",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2021/diagrams/";
-          
-        },
-      },{id: "post-a-distill-style-blog-post",
-        
-          title: "a distill-style blog post",
-        
-        description: "an example of a distill-style blog post and main elements",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2021/distill/";
-          
-        },
-      },{id: "post-a-post-with-twitter",
-        
-          title: "a post with twitter",
-        
-        description: "an example of a blog post with twitter",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2020/twitter/";
-          
-        },
-      },{id: "post-a-post-with-disqus-comments",
-        
-          title: "a post with disqus comments",
-        
-        description: "an example of a blog post with disqus comments",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2015/disqus-comments/";
-          
-        },
-      },{id: "post-a-post-with-math",
-        
-          title: "a post with math",
-        
-        description: "an example of a blog post with some math",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2015/math/";
-          
-        },
-      },{id: "post-a-post-with-code",
-        
-          title: "a post with code",
-        
-        description: "an example of a blog post with some code",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2015/code/";
-          
-        },
-      },{id: "post-a-post-with-images",
-        
-          title: "a post with images",
-        
-        description: "this is what included images could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2015/images/";
-          
-        },
-      },{id: "post-a-post-with-formatting-and-links",
-        
-          title: "a post with formatting and links",
-        
-        description: "march & april, looking forward to summer",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/al-folio/blog/2015/formatting-and-links/";
-          
-        },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/al-folio/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/al-folio/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
-          description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/al-folio/projects/9_project/";
-            },},{id: "teachings-data-science-fundamentals",
-          title: 'Data Science Fundamentals',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/al-folio/teachings/data-science-fundamentals/";
-            },},{id: "teachings-introduction-to-machine-learning",
-          title: 'Introduction to Machine Learning',
-          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/al-folio/teachings/introduction-to-machine-learning/";
-            },},{
-        id: 'social-cv',
-        title: 'CV',
-        section: 'Socials',
-        handler: () => {
-          window.open("/al-folio/assets/pdf/example_pdf.pdf", "_blank");
-        },
-      },{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
-        },
-      },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/al-folio/feed.xml", "_blank");
-        },
-      },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
-        },
-      },{
-      id: 'light-theme',
-      title: 'Change theme to light',
-      description: 'Change the theme of the site to Light',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("light");
-      },
-    },
-    {
-      id: 'dark-theme',
-      title: 'Change theme to dark',
-      description: 'Change the theme of the site to Dark',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("dark");
-      },
-    },
-    {
-      id: 'system-theme',
-      title: 'Use system default theme',
-      description: 'Change the theme of the site to System Default',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("system");
-      },
-    },];
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>al-folio | about</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="al-folio" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://github.com/pages/davidvillafan96/" />
+<meta property="og:url" content="https://github.com/pages/davidvillafan96/" />
+<meta property="og:site_name" content="about" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="al-folio" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"al-folio","name":"about","url":"https://github.com/pages/davidvillafan96/"}</script>
+<!-- End Jekyll SEO tag -->
 
-</script> <script src="/al-folio/assets/al_search/js/shortcut-key.js"></script> </body> </html>
+    <link rel="stylesheet" href="/pages/davidvillafan96/assets/css/style.css?v=172c2e3e61f759bc5ef49e814aba365f24f9746f">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/pages/davidvillafan96/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://github.com/pages/davidvillafan96/">about</a></h1>
+      
+
+      <h1 id="al-folio">al-folio</h1>
+
+<div align="center">
+
+[![Preview](/pages/davidvillafan96/readme_preview/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
+
+**A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.**
+
+---
+
+[![deploy](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml)
+[![Maintainers](https://img.shields.io/badge/maintainers-4-success.svg)](#maintainers)
+[![GitHub contributors](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://github.com/alshedivat/al-folio/graphs/contributors/)
+
+[![Docker Image Version](https://img.shields.io/docker/v/amirpourmand/al-folio?sort=semver&amp;label=docker%20image&amp;color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
+[![Docker Image Size](https://img.shields.io/docker/image-size/amirpourmand/al-folio?sort=date&amp;label=docker%20image%20size&amp;color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
+[![Docker Pulls](https://img.shields.io/docker/pulls/amirpourmand/al-folio?color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
+
+[![GitHub release](https://img.shields.io/github/v/release/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/releases/latest)
+[![GitHub license](https://img.shields.io/github/license/alshedivat/al-folio?color=blue)](https://github.com/alshedivat/al-folio/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/fork)
+
+[![Code Wiki](https://img.shields.io/badge/Code_Wiki-ask_about_repo-blue?logo=googlegemini)](https://codewiki.google/github.com/alshedivat/al-folio)
+[![DeepWiki](https://img.shields.io/badge/DeepWiki-ask_about_repo-lightcyan)](https://deepwiki.com/alshedivat/al-folio)
+
+</div>
+
+<h2 id="user-community">User community</h2>
+
+<p>The vibrant community of <strong>al-folio</strong> users is growing!
+Academics around the world use this theme for their homepages, blogs, lab pages, as well as webpages for courses, workshops, conferences, meetups, and more.
+Check out the community webpages below.
+Feel free to add your own page(s) by sending a PR.</p>
+
+<table>
+<tr>
+<td>Academics</td>
+<td>
+<a href="https://pranavraj575.github.io" target="_blank">★</a>
+<a href="https://martinbulla.github.io" target="_blank">★</a>
+<a href="https://maruan.alshedivat.com" target="_blank">★</a>
+<a href="https://www.cs.columbia.edu/~chen1ru/" target="_blank">★</a>
+<a href="https://maithraraghu.com" target="_blank">★</a>
+<a href="https://platanios.org" target="_blank">★</a>
+<a href="https://otiliastr.github.io" target="_blank">★</a>
+<a href="https://www.maths.dur.ac.uk/~sxwc62/" target="_blank">★</a>
+<a href="https://mayankm96.github.io/" target="_blank">★</a>
+<a href="https://markdean.info/" target="_blank">★</a>
+<a href="https://kakodkar.github.io/" target="_blank">★</a>
+<a href="https://sahirbhatnagar.com/" target="_blank">★</a>
+<a href="https://spd.gr/" target="_blank">★</a>
+<a href="https://jay-sarkar.github.io/" target="_blank">★</a>
+<a href="https://aborowska.github.io/" target="_blank">★</a>
+<a href="https://aditisgh.github.io/" target="_blank">★</a>
+<a href="https://alexhaydock.co.uk/" target="_blank">★</a>
+<a href="https://alixkeener.net/" target="_blank">★</a>
+<a href="https://andreea7b.github.io/" target="_blank">★</a>
+<a href="https://rishabhjoshi.github.io/" target="_blank">★</a>
+<a href="https://sheelabhadra.github.io/" target="_blank">★</a>
+<a href="https://giograno.com/" target="_blank">★</a>
+<a href="https://immsrini.github.io/" target="_blank">★</a>
+<a href="https://apooladian.github.io/" target="_blank">★</a>
+<a href="https://chinmoy-dutta.github.io/" target="_blank">★</a>
+<a href="https://liamcli.com/" target="_blank">★</a>
+<a href="https://yoonholee.com/" target="_blank">★</a>
+<a href="https://abstractgeek.github.io/" target="_blank">★</a>
+<a href="https://www.compphys.de/" target="_blank">★</a>
+<a href="https://julianstreyczek.github.io" target="_blank">★</a>
+<a href="https://sdaza.com" target="_blank">★</a>
+<a href="https://niweera.com/" target="_blank">★</a>
+<a href="https://www.alihkw.com" target="_blank">★</a>
+<a href="https://amirpourmand.ir" target="_blank">★</a>
+<a href="https://scottleechua.github.io" target="_blank">★</a>
+<a href="https://sk1y101.github.io" target="_blank">★</a>
+<a href="https://yyang768osu.github.io" target="_blank">★</a>
+<a href="https://veedata.github.io" target="_blank">★</a>
+<a href="https://K-Wu.github.io" target="_blank">★</a>
+<a href="https://amalawilson.com" target="_blank">★</a>
+<a href="https://tirtharajdash.github.io" target="_blank">★</a>
+<a href="https://carolinacarreira.github.io" target="_blank">★</a>
+<a href="https://manandey.github.io" target="_blank">★</a>
+<a href="https://johanneshoerner.github.io" target="_blank">★</a>
+<a href="https://ioannismavromatis.com" target="_blank">★</a>
+<a href="https://taidnguyen.github.io" target="_blank">★</a>
+<a href="https://lbugnon.github.io" target="_blank">★</a>
+<a href="https://joahannes.github.io" target="_blank">★</a>
+<a href="https://dominikstrb.github.io" target="_blank">★</a>
+<a href="https://tylerbarna.com" target="_blank">★</a>
+<a href="https://daviddmc.github.io/" target="_blank">★</a>
+<a href="https://andreaskuster.ch/" target="_blank">★</a>
+<a href="https://ellisbrown.github.io/" target="_blank">★</a>
+<a href="https://djherron.github.io/" target="_blank">★</a>
+<a href="https://rodosingh.github.io/" target="_blank">★</a>
+<a href="https://vdivakar.github.io/" target="_blank">★</a>
+<a href="https://george-gca.github.io/" target="_blank">★</a>
+<a href="https://bashirkazimi.github.io/" target="_blank">★</a>
+<a href="https://dohaison.github.io/" target="_blank">★</a>
+<a href="https://raphaaal.github.io/" target="_blank">★</a>
+<a href="https://varuniyer.info/" target="_blank">★</a>
+<a href="https://yukimasano.github.io/" target="_blank">★</a>
+<a href="https://hashe037.github.io/" target="_blank">★</a>
+<a href="https://wang-boyu.github.io/" target="_blank">★</a>
+<a href="https://qingqingchen.info" target="_blank">★</a>
+<a href="https://bajinsheng.github.io/" target="_blank">★</a>
+<a href="https://www.silviofanzon.com/" target="_blank">★</a>
+<a href="https://kaikaiyao.github.io/" target="_blank">★</a>
+<a href="https://lilyzhng.github.io/" target="_blank">★</a>
+<a href="https://samadamday.com/" target="_blank">★</a>
+<a href="https://fanpu.io/" target="_blank">★</a>
+<a href="https://abigalekim.github.io/" target="_blank">★</a>
+<a href="https://lucasresck.github.io/" target="_blank">★</a>
+<a href="https://users.wpi.edu/~lfichera/" target="_blank">★</a>
+<a href="https://anmspro.github.io/" target="_blank">★</a>
+<a href="https://berlyne.net/" target="_blank">★</a>
+<a href="https://filippomazzoli.github.io/" target="_blank">★</a>
+<a href="https://www.escontrela.me/" target="_blank">★</a>
+<a href="https://raffaem.github.io/" target="_blank">★</a>
+<a href="https://cbueth.de/" target="_blank">★</a>
+<a href="https://kyleaoman.github.io/" target="_blank">★</a>
+<a href="https://decwest.github.io/" target="_blank">★</a>
+<a href="https://www.jedburkat.com" target="_blank">★</a>
+<a href="https://hrzhang.me" target="_blank">★</a>
+<a href="https://kudhru.github.io/" target="_blank">★</a>
+<a href="https://mbarbetti.github.io/" target="_blank">★</a>
+<a href="https://www.zhivotenko.com/" target="_blank">★</a>
+<a href="https://giordanodaloisio.github.io/" target="_blank">★</a>
+<a href="https://aadityaura.github.io/" target="_blank">★</a>
+<a href="https://roydipta.com/" target="_blank">★</a>
+<a href="https://astanziola.github.io" target="_blank">★</a>
+<a href="https://tinkerer.in" target="_blank">★</a>
+<a href="https://afraniomelo.github.io/en/" target="_blank">★</a>
+<a href="https://jonaruthardt.github.io" target="_blank">★</a>
+<a href="https://www.zla.app/" target="_blank">★</a>
+<a href="https://stavros.github.io" target="_blank">★</a>
+<a href="https://ericslyman.com" target="_blank">★</a>
+<a href="https://ztjona.github.io/" target="_blank">★</a>
+<a href="https://chrischoi314.github.io" target="_blank">★</a>
+<a href="https://riccobelli.faculty.polimi.it" target="_blank">★</a>
+<a href="https://kishan-ved.github.io/portfolio/" target="_blank">★</a>
+<a href="https://abhilesh.github.io/" target="_blank">★</a>
+<a href="https://jackjburnett.github.io/" target="_blank">★</a>
+<a href="https://physics-morris.github.io/" target="_blank">★</a>
+<a href="https://sraf.ir" target="_blank">★</a>
+<a href="https://acad.garywei.dev/" target="_blank">★</a>
+<a href="https://tonideleo.github.io/" target="_blank">★</a>
+<a href="https://alonkellner.com/" target="_blank">★</a>
+<a href="https://mingsun-kaust.github.io/" target="_blank">★</a>
+<a href="https://hdocmsu.github.io/" target="_blank">★</a>
+<a href="https://trandangtrungduc.github.io/" target="_blank">★</a>
+<a href="https://mumarshahbaz.com/" target="_blank">★</a>
+<a href="https://charlie-xiao.github.io/" target="_blank">★</a>
+<a href="https://giuseppeperelli.github.io/" target="_blank">★</a>
+<a href="https://shlee-lab.github.io/" target="_blank">★</a>
+<a href="https://devos50.github.io/" target="_blank">★</a>
+<a href="https://vmooers.github.io/" target="_blank">★</a>
+<a href="https://jpfonseca.github.io/" target="_blank">★</a>
+<a href="https://dmitryryumin.github.io/" target="_blank">★</a>
+<a href="https://alexiglad.github.io/" target="_blank">★</a>
+<a href="https://nishanthjkumar.com/" target="_blank">★</a>
+<a href="https://joszuijderwijk.nl/" target="_blank">★</a>
+<a href="https://d-jiao.github.io/" target="_blank">★</a>
+<a href="https://cbuelt.github.io/" target="_blank">★</a>
+<a href="https://mehrdad-noori.github.io/" target="_blank">★</a>
+<a href="https://arthurclerjon.github.io/" target="_blank">★</a>
+<a href="https://eilamshapira.com/" target="_blank">★</a>
+<a href="https://freifrauvonbleifrei.github.io/" target="_blank">★</a>
+<a href="https://thomasbourke1.github.io/" target="_blank">★</a>
+<a href="https://siddharthsule.com/" target="_blank">★</a>
+<a href="https://wenjiexu.site/" target="_blank">★</a>
+<a href="https://zlatanajanovic.com/" target="_blank">★</a>
+<a href="https://mchadolias.github.io/" target="_blank">★</a>
+<a href="https://syanyong.github.io/" target="_blank">★</a>
+<a href="https://jucheval.github.io/" target="_blank">★</a>
+<a href="https://j1yoo.github.io/" target="_blank">★</a>
+<a href="https://zhoji.github.io/" target="_blank">★</a>
+<a href="https://smsnobin77.github.io/" target="_blank">★</a>
+<a href="https://dongkyu-lee.info/" target="_blank">★</a>
+<a href="https://laurajul.github.io/" target="_blank">★</a>
+<a href="https://vud.org" target="_blank">★</a>
+<a href="https://www.byeongsc.com/" target="_blank">★</a>
+<a href="https://deden.id/" target="_blank">★</a>
+</td>
+</tr>
+<tr>
+<td>Labs</td>
+<td>
+<a href="https://haylab.caltech.edu/" target="_blank">★</a>
+<a href="https://sjkimlab.github.io/" target="_blank">★</a>
+<a href="https://systemconsultantgroup.github.io/scg-folio/" target="_blank">★</a>
+<a href="https://decisionlab.ucsf.edu/" target="_blank">★</a>
+<a href="https://programming-group.com/" target="_blank">★</a>
+<a href="https://sailing-lab.github.io/" target="_blank">★</a>
+<a href="https://inbt.jhu.edu/epidiagnostics/" target="_blank">★</a>
+<a href="https://www.nuesl.org/" target="_blank">★</a>
+<a href="https://big-culture.github.io/" target="_blank">★</a>
+<a href="https://martinbulla.github.io/bullab/" target="_blank">★</a>
+<a href="https://gpforesteyes.github.io/" target="_blank">★</a>
+<a href="https://kenji-fukushima-lab.github.io/" target="_blank">★</a>
+</td>
+</tr>
+<tr>
+<td>Courses</td>
+<td>
+CMU PGM (<a href="https://sailinglab.github.io/pgm-spring-2019/" target="_blank">S-19</a>) <br />
+CMU DeepRL (<a href="https://cmudeeprl.github.io/403_website/" target="_blank">S-21</a>, <a href="https://cmudeeprl.github.io/703website_f21/" target="_blank">F-21</a>, <a href="https://cmudeeprl.github.io/403website_s22/" target="_blank">S-22</a>, <a href="https://cmudeeprl.github.io/703website_f22/" target="_blank">F-22</a>, <a href="https://cmudeeprl.github.io/403website_s23/" target="_blank">S-23</a>, <a href="https://cmudeeprl.github.io/703website_f23/" target="_blank">F-23</a>) <br />
+CMU MMML (<a href="https://cmu-multicomp-lab.github.io/mmml-course/fall2020/" target="_blank">F-20</a>, <a href="https://cmu-multicomp-lab.github.io/mmml-course/fall2022/" target="_blank">F-22</a>) <br />
+CMU AMMML (<a href="https://cmu-multicomp-lab.github.io/adv-mmml-course/spring2022/" target="_blank">S-22</a>, <a href="https://cmu-multicomp-lab.github.io/adv-mmml-course/spring2023/" target="_blank">S-23</a>) <br />
+CMU ASI (<a href="https://cmu-multicomp-lab.github.io/asi-course/spring2023/" target="_blank">S-23</a>) <br />
+CMU Distributed Systems (<a href="https://andrew.cmu.edu/course/15-440/" target="_blank">S-24</a>)
+</td>
+</tr>
+<tr>
+<td>Conferences &amp; workshops</td>
+<td>
+ICLR Blog Post Track (<a href="https://iclr-blogposts.github.io/2023/" target="_blank">2023</a>, <a href="https://iclr-blogposts.github.io/2024/about" target="_blank">2024</a>) <br />
+ML Retrospectives (NeurIPS: <a href="https://ml-retrospectives.github.io/neurips2019/" target="_blank">2019</a>, <a href="https://ml-retrospectives.github.io/neurips2020/" target="_blank">2020</a>; ICML: <a href="https://ml-retrospectives.github.io/icml2020/" target="_blank">2020</a>) <br />
+HAMLETS (NeurIPS: <a href="https://hamlets-workshop.github.io/" target="_blank">2020</a>) <br />
+ICBINB (NeurIPS: <a href="https://i-cant-believe-its-not-better.github.io/" target="_blank">2020</a>, <a href="https://i-cant-believe-its-not-better.github.io/neurips2021/" target="_blank">2021</a>) <br />
+Neural Compression (ICLR: <a href="https://neuralcompression.github.io/" target="_blank">2021</a>) <br />
+Score Based Methods (NeurIPS: <a href="https://score-based-methods-workshop.github.io/" target="_blank">2022</a>)<br />
+Images2Symbols (CogSci: <a href="https://images2symbols.github.io/" target="_blank"> 2022</a>) <br />
+Medical Robotics Junior Faculty Forum (ISMR: <a href="https://junior-forum-ismr.github.io/" target="_blank"> 2023</a>)<br />
+Beyond Vision: Physics meets AI (ICIAP: <a href="https://physicsmeetsai.github.io/beyond-vision/" target="_blank">2023</a>) <br />
+Workshop on Diffusion Models (NeurIPS: <a href="https://diffusionworkshop.github.io/" target="_blank">2023</a>) <br />
+Workshop on Structured Probabilistic Inference &amp; Generative Modeling (ICML: <a href="https://spigmworkshop.github.io/" target="_blank">2023</a>, <a href="https://spigmworkshop2024.github.io/" target="_blank">2024</a>) <br />
+Workshop on Foundation and Generative Models in Biometrics (<a href="https://foundgen-bio.github.io/iccv2025/" target="_blank">ICCV 2025</a>, <a href="https://foundgen-bio.github.io/cvpr2026/" target="_blank">CVPR 2026</a>)
+</td>
+</tr>
+</table>
+
+<h2 id="lighthouse-pagespeed-insights">Lighthouse PageSpeed Insights</h2>
+
+<h3 id="desktop">Desktop</h3>
+
+<p><a href="https://htmlpreview.github.io/?https://github.com/alshedivat/al-folio/blob/main/lighthouse_results/desktop/alshedivat_github_io_al_folio_.html"><img src="/pages/davidvillafan96/lighthouse_results/desktop/pagespeed.svg" alt="Google Lighthouse PageSpeed Insights" /></a></p>
+
+<p>Run the test yourself: <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Falshedivat.github.io%2Fal-folio%2F&amp;form_factor=desktop">Google Lighthouse PageSpeed Insights</a></p>
+
+<h3 id="mobile">Mobile</h3>
+
+<p><a href="https://htmlpreview.github.io/?https://github.com/alshedivat/al-folio/blob/main/lighthouse_results/mobile/alshedivat_github_io_al_folio_.html"><img src="/pages/davidvillafan96/lighthouse_results/mobile/pagespeed.svg" alt="Google Lighthouse PageSpeed Insights" /></a></p>
+
+<p>Run the test yourself: <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Falshedivat.github.io%2Fal-folio%2F&amp;form_factor=mobile">Google Lighthouse PageSpeed Insights</a></p>
+
+<h2 id="table-of-contents">Table Of Contents</h2>
+
+<!--ts-->
+
+<ul>
+  <li><a href="#al-folio">al-folio</a>
+    <ul>
+      <li><a href="#user-community">User community</a></li>
+      <li><a href="#lighthouse-pagespeed-insights">Lighthouse PageSpeed Insights</a>
+        <ul>
+          <li><a href="#desktop">Desktop</a></li>
+          <li><a href="#mobile">Mobile</a></li>
+        </ul>
+      </li>
+      <li><a href="#table-of-contents">Table Of Contents</a></li>
+      <li><a href="#getting-started">Getting started</a></li>
+      <li><a href="#installing-and-deploying">Installing and Deploying</a></li>
+      <li><a href="#customizing">Customizing</a></li>
+      <li><a href="#plugin-ecosystem">Plugin Ecosystem</a></li>
+      <li><a href="#using-ai-agents">Using AI Agents</a>
+        <ul>
+          <li><a href="#codex">Codex</a></li>
+          <li><a href="#claude">Claude</a></li>
+          <li><a href="#copilot-and-other-agents">Copilot And Other Agents</a></li>
+        </ul>
+      </li>
+      <li><a href="#documentation">Documentation</a></li>
+      <li><a href="#features">Features</a>
+        <ul>
+          <li><a href="#lightdark-mode">Light/Dark Mode</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#layouts">Layouts</a>
+            <ul>
+              <li><a href="#the-iconic-style-of-distill">The iconic style of Distill</a></li>
+              <li><a href="#full-support-for-math--code">Full support for math &amp; code</a></li>
+              <li><a href="#photos-audio-video-and-more">Photos, Audio, Video and more</a></li>
+            </ul>
+          </li>
+          <li><a href="#other-features">Other features</a>
+            <ul>
+              <li><a href="#githubs-repositories-and-user-stats">GitHub’s repositories and user stats</a></li>
+              <li><a href="#theming">Theming</a></li>
+              <li><a href="#social-media-previews">Social media previews</a></li>
+              <li><a href="#atom-rss-like-feed">Atom (RSS-like) Feed</a></li>
+              <li><a href="#related-posts">Related posts</a></li>
+              <li><a href="#code-quality-checks">Code quality checks</a></li>
+              <li><a href="#gdpr-cookie-consent-dialog">GDPR Cookie Consent Dialog</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contributing">Contributing</a>
+        <ul>
+          <li><a href="#maintainers">Maintainers</a></li>
+          <li><a href="#all-contributors">All Contributors</a></li>
+        </ul>
+      </li>
+      <li><a href="#star-history">Star History</a></li>
+      <li><a href="#license">License</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!--te-->
+
+<h2 id="getting-started">Getting started</h2>
+
+<p><strong>⚠️ Important: Use “Use this template” (not fork)</strong></p>
+
+<p>When creating your own website with al-folio, you have two options:</p>
+
+<ul>
+  <li>✅ <strong>Recommended:</strong> Click “<a href="https://github.com/new?template_name=al-folio&amp;template_owner=alshedivat">Use this template</a>” – This creates a clean copy that is independent from the main al-folio repository. Changes you make to your site won’t be accidentally submitted to al-folio as pull requests.</li>
+  <li>❌ <strong>Not recommended:</strong> Forking the repository – This keeps a link to the main al-folio repo, making it easy to accidentally submit your personal site changes as contributions to our project.</li>
+</ul>
+
+<p><strong>If you already forked:</strong> Don’t worry! You can still work with your fork normally. Just make sure to:</p>
+
+<ol>
+  <li>Make changes on a dedicated branch (e.g., <code class="language-plaintext highlighter-rouge">my-site-updates</code>)</li>
+  <li>When pushing changes, always verify you’re pushing to <strong>your own repository</strong>, not the main al-folio repository</li>
+  <li>Never create pull requests to <code class="language-plaintext highlighter-rouge">alshedivat/al-folio</code> unless you’re intentionally contributing improvements that benefit all users</li>
+</ol>
+
+<p>For quick setup, see <a href="docs/QUICKSTART.md">docs/QUICKSTART.md</a>.</p>
+
+<p>Want to learn more about Jekyll? Check out <a href="https://www.taniarascia.com/make-a-static-website-with-jekyll/">this tutorial</a>. Why Jekyll? Read <a href="https://karpathy.github.io/2014/07/01/switching-to-jekyll/">Andrej Karpathy’s blog post</a>! Why write a blog? Read <a href="https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045">Rachel Thomas blog post</a>.</p>
+
+<h2 id="installing-and-deploying">Installing and Deploying</h2>
+
+<p>For installation and deployment details please refer to <a href="docs/INSTALL.md">docs/INSTALL.md</a>.</p>
+
+<h2 id="customizing">Customizing</h2>
+
+<p>For customization details please refer to <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<h2 id="plugin-ecosystem">Plugin Ecosystem</h2>
+
+<p><code class="language-plaintext highlighter-rouge">al-folio</code> is a thin starter in <code class="language-plaintext highlighter-rouge">v1.x</code>. Runtime features are plugin-owned and published as Ruby gems.</p>
+
+<ul>
+  <li>Ownership boundaries: <a href="docs/BOUNDARIES.md">docs/BOUNDARIES.md</a></li>
+  <li>Plugin catalog metadata: <a href="_data/featured_plugins.yml"><code class="language-plaintext highlighter-rouge">_data/featured_plugins.yml</code></a></li>
+  <li>Plugin catalog page source: <a href="_pages/plugins.md"><code class="language-plaintext highlighter-rouge">_pages/plugins.md</code></a></li>
+</ul>
+
+<p>Naming convention:</p>
+
+<ul>
+  <li>Theme-coupled plugins use <code class="language-plaintext highlighter-rouge">al-folio-&lt;feature&gt;</code> repos and <code class="language-plaintext highlighter-rouge">al_folio_&lt;feature&gt;</code> gem/plugin ids.</li>
+  <li>Reusable plugins can use <code class="language-plaintext highlighter-rouge">al-&lt;feature&gt;</code> or neutral naming.</li>
+</ul>
+
+<p>Featured plugins and bundled starter plugins are different tracks. Bundling requires explicit updates to <a href="Gemfile">Gemfile</a> and <a href="_config.yml">_config.yml</a>.
+Plugin-owned changes should be made in the owning <code class="language-plaintext highlighter-rouge">al-org-dev</code> plugin repository, not by copying runtime assets into this starter.
+The bundled v1 plugin repos are:</p>
+
+<ul>
+  <li><a href="https://github.com/al-org-dev/al-folio-core"><code class="language-plaintext highlighter-rouge">al-folio-core</code></a>: shared layouts, includes, style/runtime primitives, and upgrade contracts</li>
+  <li><a href="https://github.com/al-org-dev/al-folio-cv"><code class="language-plaintext highlighter-rouge">al-folio-cv</code></a>: CV rendering</li>
+  <li><a href="https://github.com/al-org-dev/al-folio-distill"><code class="language-plaintext highlighter-rouge">al-folio-distill</code></a>: Distill layouts and runtime assets</li>
+  <li><a href="https://github.com/al-org-dev/al-folio-bootstrap-compat"><code class="language-plaintext highlighter-rouge">al-folio-bootstrap-compat</code></a>: temporary Bootstrap compatibility runtime</li>
+  <li><a href="https://github.com/al-org-dev/al-folio-upgrade"><code class="language-plaintext highlighter-rouge">al-folio-upgrade</code></a>: v1 upgrade audit/report/codemods</li>
+  <li><a href="https://github.com/al-org-dev/al-icons"><code class="language-plaintext highlighter-rouge">al-icons</code></a>: icon loading</li>
+  <li><a href="https://github.com/al-org-dev/al-search"><code class="language-plaintext highlighter-rouge">al-search</code></a>: search runtime</li>
+  <li><a href="https://github.com/al-org-dev/al-citations"><code class="language-plaintext highlighter-rouge">al-citations</code></a>: publication/citation helpers</li>
+  <li><a href="https://github.com/al-org-dev/al-ext-posts"><code class="language-plaintext highlighter-rouge">al-ext-posts</code></a>: external post ingestion</li>
+  <li><a href="https://github.com/al-org-dev/al-analytics"><code class="language-plaintext highlighter-rouge">al-analytics</code></a>, <a href="https://github.com/al-org-dev/al-comments"><code class="language-plaintext highlighter-rouge">al-comments</code></a>, <a href="https://github.com/al-org-dev/al-cookie"><code class="language-plaintext highlighter-rouge">al-cookie</code></a>, <a href="https://github.com/al-org-dev/al-img-tools"><code class="language-plaintext highlighter-rouge">al-img-tools</code></a>, <a href="https://github.com/al-org-dev/al-math"><code class="language-plaintext highlighter-rouge">al-math</code></a>, <a href="https://github.com/al-org-dev/al-charts"><code class="language-plaintext highlighter-rouge">al-charts</code></a>, and <a href="https://github.com/al-org-dev/al-newsletter"><code class="language-plaintext highlighter-rouge">al-newsletter</code></a>: feature-specific runtime and integration behavior</li>
+</ul>
+
+<h2 id="using-ai-agents">Using AI Agents</h2>
+
+<p><code class="language-plaintext highlighter-rouge">al-folio</code> v1.x is designed for agent-assisted setup and migration. Agents should read <a href="/pages/davidvillafan96/AGENTS/">AGENTS.md</a> first, then use <a href="docs/BOUNDARIES.md">docs/BOUNDARIES.md</a> to route changes to the starter or the owning plugin repo.</p>
+
+<p>For existing customized forks, the recommended migration path is to ask an agent to use the <a href=".agents/skills/al-folio-v1-migration/SKILL.md">al-folio v1 migration skill</a>. The skill walks through creating a disposable migration branch, bringing site-owned content/config/data onto the v1 starter contract, running <code class="language-plaintext highlighter-rouge">al_folio_upgrade</code>, auditing local overrides, and validating the build. This is preferred over a manual file-by-file upgrade because v1 runtime ownership moved into plugins and local overrides need explicit drift tracking.</p>
+
+<p>The canonical skills live in <a href=".agents/skills/">.agents/skills/</a>. They are also exposed through <code class="language-plaintext highlighter-rouge">.codex/skills/</code> and <code class="language-plaintext highlighter-rouge">.claude/skills/</code> symlinks for agents that discover skills from tool-specific directories.</p>
+
+<h3 id="codex">Codex</h3>
+
+<p>Codex can use the repo-local skills:</p>
+
+<ul>
+  <li><a href=".agents/skills/al-folio-bootstrap/SKILL.md">al-folio bootstrap</a>: create and configure a new v1 site.</li>
+  <li><a href=".agents/skills/al-folio-v1-migration/SKILL.md">al-folio v1 migration</a>: migrate customized forks and audit local overrides.</li>
+</ul>
+
+<p>Useful first prompts:</p>
+
+<ul>
+  <li>“Use the al-folio bootstrap skill to configure my new site.”</li>
+  <li>“Use the al-folio v1 migration skill to migrate this customized fork and run the override audit.”</li>
+</ul>
+
+<h3 id="claude">Claude</h3>
+
+<p>Claude should start from <a href="/pages/davidvillafan96/CLAUDE/">CLAUDE.md</a>, which imports <a href="/pages/davidvillafan96/AGENTS/">AGENTS.md</a>. For setup or migration tasks, use the matching skill from <code class="language-plaintext highlighter-rouge">.claude/skills/</code>, which points to the canonical <code class="language-plaintext highlighter-rouge">.agents/skills/</code> directory.</p>
+
+<h3 id="copilot-and-other-agents">Copilot And Other Agents</h3>
+
+<p>Copilot should follow <a href=".github/copilot-instructions.md">.github/copilot-instructions.md</a> and the specialized agents in <a href=".github/agents/">.github/agents/</a>. Other agents should follow the same rule: keep starter work in this repo, route runtime behavior to the owning <code class="language-plaintext highlighter-rouge">al-org-dev</code> plugin, and run <code class="language-plaintext highlighter-rouge">bundle exec al-folio upgrade overrides audit</code> whenever local overrides are added or retained.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Comprehensive guides for all aspects of your al-folio website:</p>
+
+<ul>
+  <li><strong><a href="docs/README.md">Documentation index</a></strong> – All user, maintainer, and migration guides</li>
+  <li><strong><a href="docs/QUICKSTART.md">Quick Start</a></strong> – Get running in 5 minutes</li>
+  <li><strong><a href="docs/INSTALL.md">Installation &amp; Deployment</a></strong> – Set up your site on GitHub Pages or other platforms</li>
+  <li><strong><a href="docs/CUSTOMIZE.md">Customization Guide</a></strong> – Personalize your website (CVs, publications, themes, etc.)</li>
+  <li><strong><a href="docs/TROUBLESHOOTING.md">Troubleshooting</a></strong> – Fix common issues (deployment, build, styling, content)</li>
+  <li><strong><a href="docs/FAQ.md">FAQ</a></strong> – Frequently asked questions and solutions</li>
+  <li><strong><a href="docs/ANALYTICS.md">Analytics</a></strong> – Add website analytics and visitor tracking</li>
+  <li><strong><a href="docs/SEO.md">SEO Guide</a></strong> – Optimize for search engines and improve discoverability</li>
+  <li><strong><a href="_pages/plugins.md">Plugin Catalog</a></strong> – Featured and bundled plugin metadata</li>
+</ul>
+
+<h2 id="features">Features</h2>
+
+<h3 id="lightdark-mode">Light/Dark Mode</h3>
+
+<p>This template has a built-in light/dark mode. It detects the user preferred color scheme and automatically switches to it. You can also manually switch between light and dark mode by clicking on the sun/moon icon in the top right corner of the page.</p>
+
+<p align="center">
+<img src="readme_preview/light.png" width="400" />
+<img src="readme_preview/dark.png" width="400" />
+</p>
+
+<hr />
+
+<h3 id="cv">CV</h3>
+
+<p>Your CV can be generated in one of two modern formats: <strong>RenderCV</strong> (recommended, with automatic PDF generation) or <strong>JSONResume</strong> (standardized JSON format). You can use both simultaneously and switch between them, or maintain just the one you prefer.</p>
+
+<p><a href="https://alshedivat.github.io/al-folio/cv/"><img src="/pages/davidvillafan96/readme_preview/cv.png" alt="CV Preview" /></a></p>
+
+<p>For setup and customization details, see <a href="docs/CUSTOMIZE.md#modifying-the-cv-information">Modifying the CV information</a> in <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<hr />
+
+<h3 id="people">People</h3>
+
+<p>You can create a people page if you want to feature more than one person. Each person can have its own short bio, profile picture, and you can also set if every person will appear at the same or opposite sides.</p>
+
+<p><a href="https://alshedivat.github.io/al-folio/people/"><img src="/pages/davidvillafan96/readme_preview/people.png" alt="People Preview" /></a></p>
+
+<hr />
+
+<h3 id="publications">Publications</h3>
+
+<p>Your publications page is generated automatically from your BibTeX bibliography. You can customize publication display, add extra information like PDFs, and control sorting behavior.</p>
+
+<p><a href="https://alshedivat.github.io/al-folio/publications/"><img src="/pages/davidvillafan96/readme_preview/publications.png" alt="Publications Preview" /></a></p>
+
+<p>For setup, BibTeX field documentation, and customization options, see <a href="docs/CUSTOMIZE.md#adding-a-new-publication">Adding a new publication</a> and <a href="docs/CUSTOMIZE.md#managing-publication-display">Managing publication display</a> in <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<hr />
+
+<h3 id="collections">Collections</h3>
+
+<p>This Jekyll theme implements <code class="language-plaintext highlighter-rouge">collections</code> to organize content into categories. The theme comes with default collections for <code class="language-plaintext highlighter-rouge">news</code>, <code class="language-plaintext highlighter-rouge">projects</code>, <code class="language-plaintext highlighter-rouge">books</code>, and <code class="language-plaintext highlighter-rouge">teachings</code>. You can easily create your own collections for apps, stories, courses, or any other creative work.</p>
+
+<p><a href="https://alshedivat.github.io/al-folio/projects/"><img src="/pages/davidvillafan96/readme_preview/projects.png" alt="Projects Preview" /></a></p>
+
+<p>For detailed instructions on creating and customizing collections, see <a href="docs/CUSTOMIZE.md#adding-collections">Adding Collections</a> in <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<hr />
+
+<h3 id="layouts">Layouts</h3>
+
+<p><strong>al-folio</strong> comes with stylish layouts for pages and blog posts.</p>
+
+<h4 id="the-iconic-style-of-distill">The iconic style of Distill</h4>
+
+<p>The theme allows you to create blog posts in the <a href="https://distill.pub/">distill.pub</a> style:</p>
+
+<p><a href="https://alshedivat.github.io/al-folio/blog/2021/distill/"><img src="/pages/davidvillafan96/readme_preview/distill.png" alt="Distill Preview" /></a></p>
+
+<p>For more details on how to create distill-styled posts using <code class="language-plaintext highlighter-rouge">&lt;d-*&gt;</code> tags, please refer to <a href="https://alshedivat.github.io/al-folio/blog/2021/distill/">the example</a>.</p>
+
+<h4 id="full-support-for-math--code">Full support for math &amp; code</h4>
+
+<p><strong>al-folio</strong> supports fast math typesetting through <a href="https://www.mathjax.org/">MathJax</a> and code syntax highlighting using <a href="https://github.com/jwarby/jekyll-pygments-themes">GitHub style</a>. Also supports <a href="https://www.chartjs.org/">chartjs charts</a>, <a href="https://mermaid-js.github.io/mermaid/#/">mermaid diagrams</a>, and <a href="https://tikzjax.com/">TikZ figures</a>.</p>
+
+<p align="center">
+<a href="https://alshedivat.github.io/al-folio/blog/2015/math/" target="_blank"><img src="readme_preview/math.png" width="400" /></a>
+<a href="https://alshedivat.github.io/al-folio/blog/2015/code/" target="_blank"><img src="readme_preview/code.png" width="400" /></a>
+</p>
+
+<h4 id="photos-audio-video-and-more">Photos, Audio, Video and more</h4>
+
+<p>Photo formatting is made simple using Tailwind-first responsive layout utilities. Easily create beautiful grids within your blog posts and project pages, also with support for <a href="https://alshedivat.github.io/al-folio/blog/2023/videos/">video</a> and <a href="https://alshedivat.github.io/al-folio/blog/2023/audios/">audio</a> embeds:</p>
+
+<p align="center">
+  <a href="https://alshedivat.github.io/al-folio/projects/1_project/">
+    <img src="readme_preview/photos-screenshot.png" width="75%" />
+  </a>
+</p>
+
+<hr />
+
+<h3 id="other-features">Other features</h3>
+
+<h4 id="githubs-repositories-and-user-stats">GitHub’s repositories and user stats</h4>
+
+<p><strong>al-folio</strong> displays GitHub repositories and user stats on the <code class="language-plaintext highlighter-rouge">/repositories/</code> page using <a href="https://github.com/anuraghazra/github-readme-stats">github-readme-stats</a> and <a href="https://github.com/ryo-ma/github-profile-trophy">github-profile-trophy</a>.</p>
+
+<p><a href="https://alshedivat.github.io/al-folio/repositories/"><img src="/pages/davidvillafan96/readme_preview/repositories.png" alt="Repositories Preview" /></a></p>
+
+<p>To configure which repositories and GitHub profiles to display, see <a href="docs/CUSTOMIZE.md#modifying-the-user-and-repository-information">Modifying the user and repository information</a> in <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<hr />
+
+<h4 id="theming">Theming</h4>
+
+<p><strong>al-folio</strong> offers a variety of beautiful theme colors to choose from. The default is purple, but you can customize colors, fonts, spacing, and more to match your style.</p>
+
+<p>For detailed customization instructions, see <a href="docs/CUSTOMIZE.md#changing-theme-color">Changing theme color</a> and <a href="docs/CUSTOMIZE.md#customizing-fonts-spacing-and-more">Customizing fonts, spacing, and more</a> in <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<hr />
+
+<h4 id="social-media-previews">Social media previews</h4>
+
+<p><strong>al-folio</strong> supports Open Graph preview images on social media. When enabled, your site’s pages display rich preview objects with images, titles, and descriptions when shared.</p>
+
+<p>For setup and customization, see <a href="docs/CUSTOMIZE.md#social-media-previews">Social media previews</a> in <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<hr />
+
+<h4 id="atom-rss-like-feed">Atom (RSS-like) Feed</h4>
+
+<p>It generates an Atom (RSS-like) feed of your posts, useful for Atom and RSS readers. The feed is reachable simply by typing after your homepage <code class="language-plaintext highlighter-rouge">/feed.xml</code>. E.g. assuming your website mountpoint is the main folder, you can type <code class="language-plaintext highlighter-rouge">yourusername.github.io/feed.xml</code></p>
+
+<hr />
+
+<h4 id="related-posts">Related posts</h4>
+
+<p>By default, blog posts display related posts at the bottom. These are selected by finding the most recent posts that share tags with the current post. You can customize this behavior on a per-post or site-wide basis.</p>
+
+<p>For configuration details, see <a href="docs/CUSTOMIZE.md#related-posts">Related posts</a> in <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<hr />
+
+<h4 id="code-quality-checks">Code quality checks</h4>
+
+<p>Currently, we run some checks to ensure that the code quality and generated site are good. The checks are done using GitHub Actions and the following tools:</p>
+
+<ul>
+  <li><a href="https://prettier.io/">Prettier</a> - check if the formatting of the code follows the style guide</li>
+  <li><a href="https://lychee.cli.rs/">lychee</a> - check for broken links</li>
+  <li><a href="https://github.com/dequelabs/axe-core">Axe</a> (need to run manually) - do some accessibility testing</li>
+</ul>
+
+<p>We decided to keep <code class="language-plaintext highlighter-rouge">Axe</code> runs manual because fixing the issues are not straightforward and might be hard for people without web development knowledge.</p>
+
+<hr />
+
+<h4 id="gdpr-cookie-consent-dialog">GDPR Cookie Consent Dialog</h4>
+
+<p><strong>al-folio</strong> includes a GDPR-compliant cookie consent dialog provided by the <code class="language-plaintext highlighter-rouge">al_cookie</code> plugin to ensure your website respects visitor privacy. The dialog is powered by <a href="https://cookieconsent.orestbida.com/">Vanilla Cookie Consent</a> and integrates seamlessly with all supported analytics providers.</p>
+
+<p>When enabled, analytics scripts are blocked until the user explicitly consents, and user preferences are saved across visits. This is essential for websites serving visitors in the European Union and other regions with strict privacy regulations.</p>
+
+<p>For complete setup and customization details, see <a href="docs/CUSTOMIZE.md#gdpr-cookie-consent-dialog">GDPR Cookie Consent Dialog</a> in <a href="docs/CUSTOMIZE.md">docs/CUSTOMIZE.md</a>.</p>
+
+<h2 id="faq">FAQ</h2>
+
+<p>For frequently asked questions, please refer to <a href="docs/FAQ.md">docs/FAQ.md</a>.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Contributions to al-folio are very welcome! Before you get started, please take a look at <a href="docs/CONTRIBUTING.md">the guidelines</a>.</p>
+
+<p>If you would like to improve documentation or fix a minor inconsistency or bug, please feel free to send a PR directly to <code class="language-plaintext highlighter-rouge">main</code>. For more complex issues/bugs or feature requests, please open an issue using the appropriate template.</p>
+
+<h3 id="maintainers">Maintainers</h3>
+
+<p>Our most active contributors are welcome to join the maintainers team. If you are interested, please reach out!</p>
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://maruan.alshedivat.com"><img src="https://avatars.githubusercontent.com/u/2126561?v=4" width="100px;" alt="" /><br /><sub><b>Maruan</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://rohandebsarkar.github.io"><img src="https://avatars.githubusercontent.com/u/50144004?v=4" width="100px;" alt="" /><br /><sub><b>Rohan Deb Sarkar</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://amirpourmand.ir"><img src="https://avatars.githubusercontent.com/u/32064808?v=4" width="100px;" alt="" /><br /><sub><b>Amir Pourmand</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://george-gca.github.io/"><img src="https://avatars.githubusercontent.com/u/31376482?v=4" width="100px;" alt="" /><br /><sub><b>George</b></sub></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<h3 id="all-contributors">All Contributors</h3>
+
+<p><a href="https://contrib.rocks">
+  <img src="https://contrib.rocks/image?repo=alshedivat/al-folio&amp;max=500&amp;columns=24" />
+</a></p>
+
+<h2 id="star-history">Star History</h2>
+
+<p><a href="https://star-history.com/#alshedivat/al-folio&amp;Date"></a></p>
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=alshedivat/al-folio&amp;type=Date&amp;theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=alshedivat/al-folio&amp;type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=alshedivat/al-folio&amp;type=Date" />
+  </picture>
+<p>&lt;/a&gt;</p>
+
+<h2 id="license">License</h2>
+
+<p>The theme is available as open source under the terms of the <a href="https://github.com/alshedivat/al-folio/blob/main/LICENSE">MIT License</a>.</p>
+
+<p>Originally, <strong>al-folio</strong> was based on the <a href="https://github.com/bogoli/-folio">*folio theme</a> (published by <a href="https://liabogoev.com">Lia Bogoev</a> and under the MIT license). Since then, it got a full re-write of the styles and many additional cool features.</p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/davidvillafan96/davidvillafan96.github.io/edit/master/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
