@@ -1,4 +1,5 @@
 name: Deploy
+
 on:
   push:
     branches:
@@ -10,13 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install and Build 🔧
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install dependencies and Build
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           export PAGES_REPO_NWO=${{ github.repository }}
           bundle exec jekyll build
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
