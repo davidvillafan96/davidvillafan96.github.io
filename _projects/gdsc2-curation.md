@@ -19,6 +19,67 @@ importance: 1
       Transformed pipeline links: Drug Response • Cell Line Molecular/Clinical Annotations • Compound Targets
     </p>
   </div>
+<div class="my-12 pt-4">
+  <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-6 flex items-center gap-2">
+    <i class="fa-solid fa-network-wired text-cyan-500"></i> Analytical Workflow Pipeline
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+    
+    <div class="bg-white border border-gray-100 p-4 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:border-cyan-200 transition-colors">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-cyan-500 block mb-1">Step 01</span>
+        <h4 class="font-bold text-gray-900 text-sm mb-2">Data Ingestion</h4>
+        <p class="text-xs text-gray-500 leading-relaxed">Consolidation of multi-file source tables (GDSC2 response, multi-omics, drug metadata).</p>
+      </div>
+      <div class="text-xs font-mono text-gray-300 mt-4 text-right">Raw Inputs</div>
+    </div>
+
+    <div class="bg-white border border-gray-100 p-4 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:border-cyan-200 transition-colors">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-cyan-500 block mb-1">Step 02</span>
+        <h4 class="font-bold text-gray-900 text-sm mb-2">Curation & Cast</h4>
+        <p class="text-xs text-gray-500 leading-relaxed">Data-type compliance auditing, identifier mapping (COSMIC), and handling implicit NAs.</p>
+      </div>
+      <div class="text-xs font-mono text-gray-300 mt-4 text-right">Sanitization</div>
+    </div>
+
+    <div class="bg-white border border-gray-100 p-4 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:border-cyan-200 transition-colors">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-cyan-500 block mb-1">Step 03</span>
+        <h4 class="font-bold text-gray-900 text-sm mb-2">Standardization</h4>
+        <p class="text-xs text-gray-500 leading-relaxed">Z-score transformation of core metrics ($LN(IC_{50})$, $AUC$) to unify distribution scalar scale.</p>
+      </div>
+      <div class="text-xs font-mono text-gray-300 mt-4 text-right">$\mu=0, \sigma=1$</div>
+    </div>
+
+    <div class="bg-white border border-gray-100 p-4 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:border-cyan-200 transition-colors">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-cyan-500 block mb-1">Step 04</span>
+        <h4 class="font-bold text-gray-900 text-sm mb-2">Quality Control</h4>
+        <p class="text-xs text-gray-500 leading-relaxed">Outlier detection via $\pm3\sigma$ thresholds and structural variance consistency checks.</p>
+      </div>
+      <div class="text-xs font-mono text-gray-300 mt-4 text-right">QC Audit</div>
+    </div>
+
+    <div class="bg-white border border-cyan-100 bg-cyan-50/20 p-4 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-cyan-600 block mb-1">Step 05</span>
+        <h4 class="font-bold text-gray-900 text-sm mb-2">Model Readiness</h4>
+        <p class="text-xs text-gray-600 leading-relaxed">Exporting a unified matrix tailored for PCA, feature selection, and predictive ML.</p>
+      </div>
+      <div class="text-xs font-mono text-cyan-600 mt-4 text-right font-bold">Ready Asset</div>
+    </div>
+
+  </div>
+
+  <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[800px] mx-auto transition-transform hover:scale-[1.005]">
+    <img src="{{ '/assets/img/gdsc2/workflow.png' | relative_url }}" alt="GDSC2 Curation Pipeline Diagram" class="w-full h-auto rounded-xl">
+    <div class="text-center text-xs text-gray-400 mt-2 font-mono">
+      Figure 1.0: End-to-end data transformation pipeline from heterogeneous files to downstream modeling.
+    </div>
+  </div>
+</div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
     <div class="bg-white border border-gray-100 shadow-sm rounded-xl p-6">
