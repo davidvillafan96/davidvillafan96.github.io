@@ -79,10 +79,17 @@ importance: 3
     </div>
   </div>
 
-  <div class="border border-gray-200 rounded-xl overflow-hidden bg-[#1e1e1e] shadow-lg font-mono text-xs my-8">
-    <div class="bg-[#2d2d2d] px-4 py-2 text-gray-400 flex items-center justify-between border-b border-zinc-800">
-      <span class="flex items-center gap-2 text-[11px]"><i class="fa-solid fa-code text-indigo-400"></i> pipeline_preprocessing.R</span>
-      <span class="text-[10px] bg-zinc-800 px-2 py-0.5 rounded text-zinc-500">Data Prep Block</span>
+  <div class="border border-[#333] rounded-xl overflow-hidden bg-[#1e1e1e] shadow-2xl font-mono text-xs my-8 ring-1 ring-white/10">
+    <div class="bg-[#252526] px-4 py-3 text-gray-400 flex items-center justify-between border-b border-[#2d2d2d]">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block shadow-inner"></span>
+        <span class="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block shadow-inner"></span>
+        <span class="w-3 h-3 rounded-full bg-[#27c93f] inline-block shadow-inner"></span>
+        <span class="ml-2 text-gray-300 font-medium text-[11px] flex items-center gap-1.5 font-mono">
+          <i class="fa-solid fa-code text-indigo-400"></i> pipeline_preprocessing.R
+        </span>
+      </div>
+      <span class="text-[10px] bg-[#333333] px-2.5 py-0.5 rounded text-gray-300 font-semibold uppercase tracking-wider">Data Prep Block</span>
     </div>
 {% highlight r %}
 # Feature Cleansing, One-Hot Encoding, and Near-Zero Variance Filtering
@@ -154,10 +161,17 @@ df_proc  <- predict(preproc, df_dummy)
     Since the pharmacological target vectors were Z-score standardized ($\sigma = 1$), an <strong>RMSE < 1 (~0.88)</strong> proves that our algorithms capture true biological mechanisms rather than overfitting random technical noise within high-throughput screenings.
   </div>
 
-  <div class="border border-gray-200 rounded-xl overflow-hidden bg-[#1e1e1e] shadow-lg font-mono text-xs my-6">
-    <div class="bg-[#2d2d2d] px-4 py-2 text-gray-400 flex items-center justify-between border-b border-zinc-800">
-      <span class="flex items-center gap-2 text-[11px]"><i class="fa-solid fa-code text-blue-400"></i> ensemble_regression.R</span>
-      <span class="text-[10px] bg-zinc-800 px-2 py-0.5 rounded text-zinc-500">Regression Block</span>
+  <div class="border border-[#333] rounded-xl overflow-hidden bg-[#1e1e1e] shadow-2xl font-mono text-xs my-6 ring-1 ring-white/10">
+    <div class="bg-[#252526] px-4 py-3 text-gray-400 flex items-center justify-between border-b border-[#2d2d2d]">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block shadow-inner"></span>
+        <span class="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block shadow-inner"></span>
+        <span class="w-3 h-3 rounded-full bg-[#27c93f] inline-block shadow-inner"></span>
+        <span class="ml-2 text-gray-300 font-medium text-[11px] flex items-center gap-1.5 font-mono">
+          <i class="fa-solid fa-code text-blue-400"></i> ensemble_regression.R
+        </span>
+      </div>
+      <span class="text-[10px] bg-[#333333] px-2.5 py-0.5 rounded text-gray-300 font-semibold uppercase tracking-wider">Regression Block</span>
     </div>
 {% highlight r %}
 # Partition Training and Testing Spaces for Continuous Targets
@@ -246,10 +260,17 @@ pred_xgb <- predict(xgb_reg, dtest)
     </div>
   </div>
 
-  <div class="border border-gray-200 rounded-xl overflow-hidden bg-[#1e1e1e] shadow-lg font-mono text-xs my-6">
-    <div class="bg-[#2d2d2d] px-4 py-2 text-gray-400 flex items-center justify-between border-b border-zinc-800">
-      <span class="flex items-center gap-2 text-[11px]"><i class="fa-solid fa-code text-purple-400"></i> classification_tuning.R</span>
-      <span class="text-[10px] bg-zinc-800 px-2 py-0.5 rounded text-zinc-500">Classification & Hyperparameter Tuning</span>
+  <div class="border border-[#333] rounded-xl overflow-hidden bg-[#1e1e1e] shadow-2xl font-mono text-xs my-6 ring-1 ring-white/10">
+    <div class="bg-[#252526] px-4 py-3 text-gray-400 flex items-center justify-between border-b border-[#2d2d2d]">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block shadow-inner"></span>
+        <span class="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block shadow-inner"></span>
+        <span class="w-3 h-3 rounded-full bg-[#27c93f] inline-block shadow-inner"></span>
+        <span class="ml-2 text-gray-300 font-medium text-[11px] flex items-center gap-1.5 font-mono">
+          <i class="fa-solid fa-code text-purple-400"></i> classification_tuning.R
+        </span>
+      </div>
+      <span class="text-[10px] bg-[#333333] px-2.5 py-0.5 rounded text-gray-300 font-semibold uppercase tracking-wider">Classification & Tuning</span>
     </div>
 {% highlight r %}
 # Define Categorical Target (Q25 Thresholding) and Orthogonal PCA Transformation
