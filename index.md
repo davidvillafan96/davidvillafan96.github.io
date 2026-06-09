@@ -1,4 +1,5 @@
 ---
-layout: redirect
-redirect: /about/
+layout: about
+title: about
+permalink: /
 ---
