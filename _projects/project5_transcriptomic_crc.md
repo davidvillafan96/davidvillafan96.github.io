@@ -36,7 +36,7 @@ importance: 5
     To minimize confounding patient-specific germline variations and technical batch artifacts, the framework utilizes a tightly controlled, paired experimental design covering 10,000 deep-sequenced transcript loci across progressive disease boundaries.
   </p>
 
-  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 text-center">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 text-center">
     <div class="bg-white border border-gray-100 p-5 rounded-xl shadow-sm">
       <div class="text-2xl font-bold text-gray-800 font-mono">18</div>
       <div class="text-xs font-semibold text-gray-400 font-mono mt-1 uppercase">Normal Mucosa Samples</div>
@@ -50,9 +50,17 @@ importance: 5
       <div class="text-xs font-semibold text-indigo-500 font-mono mt-1 uppercase">Metastatic Lesions</div>
     </div>
   </div>
-  <p class="text-xs text-gray-500 bg-gray-50 border p-3 rounded-lg leading-relaxed font-mono">
+  
+  <p class="text-xs text-gray-500 bg-gray-50 border p-3 rounded-lg leading-relaxed font-mono mb-10">
     ✔ Balanced Cohort Structure (n=54 total samples) derived from paired patient profiles based on GSE50760 architecture to preserve maximum multi-class statistical power.
   </p>
+
+  <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[850px] mx-auto mb-10">
+    <img src="{{ '/assets/img/crc_transcriptomics/project5_workflow.png' | relative_url }}" alt="Transcriptomic Discovery Pipeline Workflow" class="w-full h-auto rounded-xl">
+    <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
+      Figure 5.0: End-to-end transcriptomic pipeline workflow spanning RNA-Seq normalization, exploratory analytics, core network modeling, target ranking, and phenotype classification.
+    </div>
+  </div>
 </div>
 
 <div class="my-12 pt-8 border-t border-gray-100">
@@ -66,7 +74,7 @@ importance: 5
   <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[650px] mx-auto my-8">
     <img src="{{ '/assets/img/crc_transcriptomics/project5_pca.png' | relative_url }}" alt="Principal Component Analysis Spatial Separation" class="w-full h-auto rounded-xl">
     <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
-      Figure 5.0: PCA projection demonstrating clear, multi-class clustering across physiological boundaries.
+      Figure 5.1: PCA projection demonstrating clear, multi-class clustering across physiological boundaries.
     </div>
   </div>
 
@@ -93,7 +101,7 @@ importance: 5
   <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[650px] mx-auto my-8">
     <img src="{{ '/assets/img/crc_transcriptomics/project5_volcano.png' | relative_url }}" alt="DESeq2 Volcano Plot Tumor vs Normal" class="w-full h-auto rounded-xl">
     <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
-      Figure 5.1: Distribution of magnitude (Log2 Fold Change) vs. statistical significance (-Log10 Adjusted P-value).
+      Figure 5.2: Distribution of magnitude (Log2 Fold Change) vs. statistical significance (-Log10 Adjusted P-value).
     </div>
   </div>
 
@@ -162,7 +170,7 @@ importance: 5
   <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[650px] mx-auto my-8">
     <img src="{{ '/assets/img/crc_transcriptomics/project5_heatmap.png' | relative_url }}" alt="Top DEGs Expression Clustered Heatmap" class="w-full h-auto rounded-xl">
     <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
-      Figure 5.2: Unsupervised bidirectional hierarchical clustering of the top differentially expressed genes.
+      Figure 5.3: Unsupervised bidirectional hierarchical clustering of the top differentially expressed genes.
     </div>
   </div>
 </div>
@@ -178,7 +186,7 @@ importance: 5
   <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[650px] mx-auto my-8">
     <img src="{{ '/assets/img/crc_transcriptomics/project5_wgcna_modules.png' | relative_url }}" alt="WGCNA Module-Trait Relationship Heatmap" class="w-full h-auto rounded-xl">
     <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
-      Figure 5.3: Module-trait correlation matrix linking co-expression blocks with progressive clinical stages.
+      Figure 5.4: Module-trait correlation matrix linking co-expression blocks with progressive clinical stages.
     </div>
   </div>
 
@@ -206,7 +214,7 @@ importance: 5
   <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[650px] mx-auto my-8">
     <img src="{{ '/assets/img/crc_transcriptomics/project5_hub_prioritization.png' | relative_url }}" alt="Top Prioritized Hub Genes Matrix" class="w-full h-auto rounded-xl">
     <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
-      Figure 5.4: Multi-dimensional ranking isolating apex diagnostic hub targets.
+      Figure 5.5: Multi-dimensional ranking isolating apex diagnostic hub targets.
     </div>
   </div>
 
