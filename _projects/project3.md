@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Project 3: Machine Learning for Drug Response Prediction"
+title: "GDSC2 Project 3: Machine Learning for Drug Response Prediction"
 description: "From Statistical Foundations to Multi-Algorithmic Predictive Systems in Tabular Oncology"
 bg_color: "#1e1b4b"
 icon: "fa-solid fa-brain"
