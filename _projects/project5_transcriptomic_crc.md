@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Project 5: Transcriptomic Biomarker Discovery in Colorectal Cancer"
+title: "Transcriptomic Biomarker Discovery in Colorectal Cancer"
 description: "An End-to-End RNA-Seq Processing, Differential Expression (DESeq2), Network Biology (WGCNA), and Predictive Machine Learning Pipeline"
 bg_color: "#0f172a"
 icon: "fa-solid fa-dna"
