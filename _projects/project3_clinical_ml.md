@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "Project 3: Clinical Predictive Modeling for 6-Month Colorectal Cancer Recurrence"
+title: "Clinical Predictive Modeling for 6-Month Colorectal Cancer Recurrence"
 description: "Benchmarking Parametric Logistic Regression (GLM) against Recursive Partitioning Decision Trees (rpart) to Balance Statistical Interpretability and Patient Stratification in Translational Oncology"
 bg_color: "#1e1b4b"
 icon: "fa-solid fa-brain"
-importance: 3
+importance: 6
 ---
 
 <div class="mb-12 border-b border-gray-100 pb-8">
