@@ -239,7 +239,19 @@ importance: 1
     <i class="fa-solid fa-box-open"></i>
   </div>
 </div>
+<div class="my-8 pt-4 border-t border-gray-100 text-xs text-gray-400 font-mono">
+  📁 Project References & Series Pipeline Hierarchy:
+  <ul class="list-disc pl-5 mt-2 space-y-1">
+    <li>Next Milestone: <a class="text-indigo-600 hover:underline" href="{{ '/projects/gdsc2-eda/' | relative_url }}">Project 2 — Statistical Inference & Exploratory Data Analysis</a></li>
+    <li>Source Code Repositories: <a class="text-indigo-600 hover:underline" href="https://github.com/davidvillafan96/gdsc2-data-integration-pipeline" target="_blank">Data Integration Pipeline Codebase</a></li>
+  </ul>
+</div>
 
+---
+
+### 👤 Author
+
+**David Villafañe, PhD** *Biological Sciences · Genomics · Computational Biology* [<i class="fa-brands fa-linkedin"></i> LinkedIn](https://www.linkedin.com/in/davidvillafanie/) · [<i class="fa-brands fa-github"></i> GitHub](https://github.com/davidvillafan96)
 ---
 
 ### 👤 Author
