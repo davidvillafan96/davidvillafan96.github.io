@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Project 2: GDSC2 EDA & Statistical Learning"
+title: "GDSC2 Project 2: GDSC2 EDA & Statistical Learning"
 description: "Uncovering Latent Structures, Tissue Specificity, and Target Drivers"
 bg_color: "#3f37c9"
 icon: "fa-solid fa-diagram-project"
