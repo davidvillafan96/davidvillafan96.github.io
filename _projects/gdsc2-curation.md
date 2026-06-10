@@ -1,6 +1,6 @@
 ---
 layout: page
-title: " GDSC2 Project 1: Curation & Integration"
+title: "GDSC2 Project 1: Curation & Integration"
 description: "Building an Integrative Dataset for EDA and Predictive Modeling"
 bg_color: "#4cc9f0"
 icon: "fa-solid fa-laptop-code"
