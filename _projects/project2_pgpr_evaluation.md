@@ -4,7 +4,7 @@ title: "Microbial Genomics Project 2: Multivariate Genomic Fingerprinting & LDA-
 description: "A Reproducible AgTech Framework Deploying Linear Discriminant Analysis (MASS) and PCA-Imputation to Profile Functional Strengths and Gaps in Novel Bioinoculant Isolates"
 bg_color: "#022c22"
 icon: "fa-solid fa-diagram-next"
-importance: 7
+importance: 8
 ---
 
 <div class="mb-12 border-b border-gray-100 pb-8">
