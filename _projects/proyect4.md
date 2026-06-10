@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Project 4: Genomic Integration for Drug Response Prediction"
+title: "GDSC2 Project 4: Genomic Integration for Drug Response Prediction"
 description: "Transitioning from Statistical Pharmacogenomics to Genomics-Driven Predictive Modeling"
 bg_color: "#0f172a"
 icon: "fa-solid fa-dna"
