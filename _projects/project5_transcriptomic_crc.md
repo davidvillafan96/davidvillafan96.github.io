@@ -207,7 +207,7 @@ importance: 5
     To filter passenger genes from authentic core drivers, we implemented a composite ranking function tracking statistical significance, effect size, and intramodular network topology ($kME$):
   </p>
 
-  <div class="bg-slate-900 border-l-4 border-teal-500 p-4 rounded-r-xl my-6 font-mono text-center text-sm text-teal-300">
+  <div class="bg-slate-900 border-l-4 border-teal-500 p-5 rounded-r-xl my-6 font-mono text-center text-sm text-teal-300 overflow-x-auto">
     $$\text{Hub Score} = |kME| \times |\log_{2}\text{FC}| \times (-\log_{10}(\text{P}_{\text{adj}}))$$
   </div>
 
