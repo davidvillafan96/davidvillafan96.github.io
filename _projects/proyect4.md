@@ -137,10 +137,12 @@ importance: 4
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 max-w-[850px] mx-auto">
     <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
-      <img src="{{ '/assets/img/gdsc2_ml/project4_volcano.png' | relative_url }}" alt="Volcano Plot of Genomic Biomarkers" class="w-full h-auto rounded-lg">
+      <img src="{{ '/assets/img/gdsc2_ml/project4_volcano.png' | relative_url }}" alt="Volcano Plot of Genomic Resistance Biomarkers" class="w-full h-auto rounded-lg">
+      <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">Biomarcadores de Resistencia Significativos</div>
     </div>
     <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
-      <img src="{{ '/assets/img/gdsc2_ml/project4_biomarkers_distribution.png' | relative_url }}" alt="Top Genomic Biomarkers Distribution" class="w-full h-auto rounded-lg">
+      <img src="{{ '/assets/img/gdsc2_ml/project4_volcano_global.png' | relative_url }}" alt="Global Genomic Biomarkers Volcano Distribution" class="w-full h-auto rounded-lg">
+      <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">Distribución Global (Sensibilidad vs Resistencia)</div>
     </div>
   </div>
 </div>
@@ -210,18 +212,14 @@ importance: 4
     Evaluating model outputs against actual screening responses demonstrates a clear positive predictive correlation, confirming the pipeline captures genuine biological signal despite inherent technical screening noise.
   </p>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6 max-w-[900px] mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 max-w-[850px] mx-auto">
     <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
       <img src="{{ '/assets/img/gdsc2_ml/project4_prediction_trend.png' | relative_url }}" alt="Observed vs Predicted LN_IC50 Trend" class="w-full h-auto rounded-lg">
       <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">Observed vs. Predicted Distribution</div>
     </div>
     <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
-      <img src="{{ '/assets/img/gdsc2_ml/project4_kras_effects_1.png' | relative_url }}" alt="KRAS Mutation-Level Response Shift" class="w-full h-auto rounded-lg">
-      <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">KRAS Mutation Response Shift</div>
-    </div>
-    <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
-      <img src="{{ '/assets/img/gdsc2_ml/project4_kras_effects_2.png' | relative_url }}" alt="Tissue Specific Mutational Influence" class="w-full h-auto rounded-lg">
-      <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">Tissue-Specific Reproduction</div>
+      <img src="{{ '/assets/img/gdsc2_ml/project4_kras_effects_2.png' | relative_url }}" alt="Diferencias de Sensibilidad por Mutación y Tejido" class="w-full h-auto rounded-lg">
+      <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">Comparativa de LN_IC50 por Gen, Estado y Tejido</div>
     </div>
   </div>
 
@@ -363,7 +361,7 @@ importance: 4
 <div class="my-8 pt-4 border-t border-gray-100 text-xs text-gray-400 font-mono">
   📁 Project References & Series Pipeline Hierarchy:
   <ul class="list-disc pl-5 mt-2 space-y-1">
-    <li>Previous Milestone: <a class="text-indigo-600 hover:underline" href="{{ '/projects/project3_ml/' | relative_url }}">Project 3 — Tabular Machine Learning Core Systems</a></li>
+    <li>Previous Milestone: <a class="text-indigo-600 hover:underline" href="https://davidvillafan96.github.io/projects/project3/">Project 3 — Tabular Machine Learning Core Systems</a></li>
     <li>Source Code Repositories: <a class="text-indigo-600 hover:underline" href="https://github.com/davidvillafan96/gdsc-genomic-biomarker-discovery" target="_blank">Precision Discovery Codebase</a></li>
   </ul>
 </div>
