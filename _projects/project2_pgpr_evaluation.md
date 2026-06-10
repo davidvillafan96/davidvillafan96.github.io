@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Project 2: Multivariate Genomic Fingerprinting & LDA-Driven PGPR Performance Evaluation"
+title: "Microbial Genomics Project 2: Multivariate Genomic Fingerprinting & LDA-Driven PGPR Performance Evaluation"
 description: "A Reproducible AgTech Framework Deploying Linear Discriminant Analysis (MASS) and PCA-Imputation to Profile Functional Strengths and Gaps in Novel Bioinoculant Isolates"
 bg_color: "#022c22"
 icon: "fa-solid fa-diagram-next"
