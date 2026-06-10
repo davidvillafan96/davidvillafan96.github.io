@@ -203,7 +203,20 @@ importance: 2
     <i class="fa-solid fa-gears"></i>
   </div>
 </div>
+<div class="my-8 pt-4 border-t border-gray-100 text-xs text-gray-400 font-mono">
+  📁 Project References & Series Pipeline Hierarchy:
+  <ul class="list-disc pl-5 mt-2 space-y-1">
+    <li>Previous Milestone: <a class="text-indigo-600 hover:underline" href="{{ '/projects/gdsc2-curation/' | relative_url }}">Project 1 — Data Curation & Preprocessing</a></li>
+    <li>Next Milestone: <a class="text-indigo-600 hover:underline" href="{{ '/projects/project3/' | relative_url }}">Project 3 — Tabular Machine Learning Core Systems</a></li>
+    <li>Source Code Repositories: <a class="text-indigo-600 hover:underline" href="https://github.com/davidvillafan96/gdsc2-pharmacogenomics-eda" target="_blank">Pharmacogenomics EDA Codebase</a></li>
+  </ul>
+</div>
 
+---
+
+### 👤 Author
+
+**David Villafañe, PhD** *Biological Sciences · Genomics · Computational Biology* [<i class="fa-brands fa-linkedin"></i> LinkedIn](https://www.linkedin.com/in/davidvillafanie/) · [<i class="fa-brands fa-github"></i> GitHub](https://github.com/davidvillafan96)
 ---
 
 ### 👤 Author
