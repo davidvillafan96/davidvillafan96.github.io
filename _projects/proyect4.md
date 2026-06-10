@@ -43,7 +43,7 @@ importance: 4
     <i class="fa-solid fa-network-wired text-emerald-600"></i> High-Dimensional Feature Engineering Pipeline
   </h2>
   <p class="text-sm text-gray-600 mb-8 leading-relaxed">
-    By expanding our tabular matrix with over 750 functional genomic somatic mutation profiles, the framework shifts from predicting drug response based purely on drug classes or tissue origins to uncovering specific genomic alterations that dictate cellular sensitivity or resistance.
+    By expanding our tabular matrix with over 750 functional genomic somatic mutation profiles from COSMIC, the framework shifts from predicting drug response based purely on drug classes or tissue origins to uncovering specific genomic alterations that dictate cellular sensitivity or resistance.
   </p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
@@ -73,9 +73,9 @@ importance: 4
   </div>
 
   <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[850px] mx-auto mb-10">
-    <img src="{{ '/assets/img/gdsc2_ml/Project3_workflow.png' | relative_url }}" alt="Genomic Integration Pipeline Workflow" class="w-full h-auto rounded-xl">
+    <img src="{{ '/assets/img/gdsc2_ml/project4_workflow.png' | relative_url }}" alt="Genomic Integration Pipeline Workflow" class="w-full h-auto rounded-xl">
     <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
-      Figure 4.0: End-to-end data integration, genomic feature filtering, and parallel model execution.
+      Figure 4.0: End-to-end data integration, genomic feature filtering, and parallel model execution workflow.
     </div>
   </div>
 </div>
@@ -105,34 +105,43 @@ importance: 4
           <td class="p-4 font-bold text-slate-900">KRAS</td>
           <td class="p-4 font-mono text-gray-600">~1e-43</td>
           <td class="p-4 font-mono text-gray-600">1.34</td>
-          <td class="p-4 text-gray-500">Statistical giant; highly robust, invariant driver across multiple histological lineages.</td>
+          <td class="p-4 text-gray-500"><strong>Statistical giant:</strong> Extremely robust and highly consistent signal across the entire screening dataset regardless of tissue lineage.</td>
         </tr>
         <tr>
           <td class="p-4 font-bold text-slate-900">GLI1</td>
           <td class="p-4 font-mono text-gray-600">~1e-35</td>
           <td class="p-4 font-mono text-gray-600">2.43</td>
-          <td class="p-4 text-gray-500">Strong resistance phenotype driver; prominent target linked to systemic treatment escape.</td>
+          <td class="p-4 text-gray-500"><strong>Effect driver:</strong> Prominent role linked to a strong and systematic therapy escape/resistance phenotype.</td>
         </tr>
         <tr>
           <td class="p-4 font-bold text-slate-900">TPR</td>
           <td class="p-4 font-mono text-gray-600">~1e-35</td>
           <td class="p-4 font-mono text-gray-600">2.30</td>
-          <td class="p-4 text-gray-500">High-impact nuclear pore complex mutation causing profound pharmacological alterations.</td>
+          <td class="p-4 text-gray-500">High-impact somatic mutation leading to widespread downstream pharmacological response alterations.</td>
         </tr>
         <tr>
           <td class="p-4 font-bold text-slate-900">RBM10</td>
           <td class="p-4 font-mono text-gray-600">~1e-22</td>
           <td class="p-4 font-mono text-gray-600">2.68</td>
-          <td class="p-4 text-emerald-700 font-medium">Strongest overall effect size; clear mechanical driver of specialized resistance.</td>
+          <td class="p-4 text-emerald-700 font-medium"><strong>Strongest overall effect size:</strong> Clear mechanistic driver correlated with highly specialized resistance traits.</td>
         </tr>
         <tr class="bg-emerald-50/10">
-          <td class="p-4 font-bold text-emerald-950">TP63 / MUC4 / DCC / MUC16</td>
+          <td class="p-4 font-bold text-emerald-950">TP63 / MUC4 / DCC / MUC16 / RAD51B</td>
           <td class="p-4 font-mono text-emerald-900">~1e-22</td>
           <td class="p-4 font-mono text-emerald-900">~1.96</td>
-          <td class="p-4 text-emerald-800">Co-occurring mutational cluster; highly likely to signal shared large-scale chromosomal alterations.</td>
+          <td class="p-4 text-emerald-800"><strong>Co-occurring cluster:</strong> Signals a highly correlated shared genomic event, likely linked to large-scale chromosomal alterations.</td>
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 max-w-[850px] mx-auto">
+    <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
+      <img src="{{ '/assets/img/gdsc2_ml/project4_volcano.png' | relative_url }}" alt="Volcano Plot of Genomic Biomarkers" class="w-full h-auto rounded-lg">
+    </div>
+    <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
+      <img src="{{ '/assets/img/gdsc2_ml/project4_biomarkers_distribution.png' | relative_url }}" alt="Top Genomic Biomarkers Distribution" class="w-full h-auto rounded-lg">
+    </div>
   </div>
 </div>
 
@@ -154,7 +163,7 @@ importance: 4
         <span class="text-2xl font-extrabold text-gray-400 font-mono">0.98</span>
         <span class="text-xs text-gray-400 font-mono">Test RMSE</span>
       </div>
-      <p class="text-[11px] text-gray-500 mt-2">Predictions restricted to tissue origins, compound labels, and general pathways.</p>
+      <p class="text-[11px] text-gray-500 mt-2">Predictions strictly restricted to generic tissue origins, compound labels, and baseline pathway profiles.</p>
     </div>
 
     <div class="bg-white border border-emerald-100 p-5 rounded-xl shadow-sm relative overflow-hidden">
@@ -165,7 +174,7 @@ importance: 4
         <span class="text-3xl font-extrabold text-slate-900 font-mono">0.89</span>
         <span class="text-xs text-emerald-600 font-mono font-bold">~10% Error Drop</span>
       </div>
-      <p class="text-[11px] text-gray-600 mt-2">Significant predictive boost validating somatic mutation data as an essential layer.</p>
+      <p class="text-[11px] text-gray-600 mt-2">Significant error reduction, validating somatic variation records as an essential precision layer in biological systems.</p>
     </div>
 
     <div class="bg-slate-900 text-white p-5 rounded-xl shadow-md relative overflow-hidden">
@@ -174,15 +183,88 @@ importance: 4
       <h4 class="font-bold text-slate-100 text-sm mb-2">With Drug Identity Layer</h4>
       <div class="flex items-baseline gap-2">
         <span class="text-3xl font-extrabold text-blue-400 font-mono">0.52</span>
-        <span class="text-xs text-blue-300 font-mono font-semibold">Near Experimental Power</span>
+        <span class="text-xs text-blue-300 font-mono font-semibold">Experimental Level</span>
       </div>
-      <p class="text-[11px] text-slate-300 mt-2">Maximum optimization tier capturing full structural variance within drug-cell interactions.</p>
+      <p class="text-[11px] text-slate-300 mt-2">Maximum optimization tier capturing full architectural variance within drug-cell screening landscapes.</p>
+    </div>
+  </div>
+
+  <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-md max-w-[650px] mx-auto my-8">
+    <img src="{{ '/assets/img/gdsc2_ml/project4_lasso.png' | relative_url }}" alt="LASSO Feature Coefficients Insights" class="w-full h-auto rounded-xl">
+    <div class="text-center text-[11px] text-gray-400 mt-2 font-mono">
+      Figure 4.1: LASSO regularization path explaining 75.6% ($R^2$) of localized model variance.
     </div>
   </div>
 
   <div class="bg-blue-50/40 border border-blue-100 rounded-xl p-4 text-xs text-slate-700 leading-relaxed my-6">
     <h5 class="font-bold text-blue-900 mb-1 flex items-center gap-1"><i class="fa-solid fa-circle-info"></i> Machine Learning Behavior & Biological Insights</h5>
-    While non-linear models like <strong>Random Forest</strong> isolate global feature distributions (identifying <em>KRAS</em> as the apex statistical contributor), regularized linear spaces via <strong>LASSO ($R^2 = 75.6\%$)</strong> reveal complex contextual links. For instance, LASSO excludes independent <em>KRAS</em> coefficients but selects the <strong>KRAS × MAPK</strong> interaction vector, proving programmatically that <em>KRAS</em> mutations trigger selective sensitivity exclusively within active MAPK pathway networks.
+    While non-linear architectures like <strong>Random Forest</strong> isolate global feature distributions (identifying <em>KRAS</em> as the apex biological contributor), regularized linear models via <strong>LASSO</strong> reveal complex epistatic links. For instance, LASSO excludes independent <em>KRAS</em> coefficients but selects the <strong>KRAS × MAPK</strong> interaction vector, proving programmatically that <em>KRAS</em> mutations trigger selective sensitivity exclusively within active MAPK pathway networks.
+  </div>
+</div>
+
+<div class="my-12 pt-8 border-t border-gray-100">
+  <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-2 flex items-center gap-2">
+    <i class="fa-solid fa-chart-gantt text-indigo-600"></i> Prediction Distribution & Mutation-Level Trends
+  </h2>
+  <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+    Evaluating model outputs against actual screening responses demonstrates a clear positive predictive correlation, confirming the pipeline captures genuine biological signal despite inherent technical screening noise.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6 max-w-[900px] mx-auto">
+    <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
+      <img src="{{ '/assets/img/gdsc2_ml/project4_prediction_trend.png' | relative_url }}" alt="Observed vs Predicted LN_IC50 Trend" class="w-full h-auto rounded-lg">
+      <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">Observed vs. Predicted Distribution</div>
+    </div>
+    <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
+      <img src="{{ '/assets/img/gdsc2_ml/project4_kras_effects_1.png' | relative_url }}" alt="KRAS Mutation-Level Response Shift" class="w-full h-auto rounded-lg">
+      <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">KRAS Mutation Response Shift</div>
+    </div>
+    <div class="border border-gray-100 p-2 rounded-xl bg-white shadow-sm">
+      <img src="{{ '/assets/img/gdsc2_ml/project4_kras_effects_2.png' | relative_url }}" alt="Tissue Specific Mutational Influence" class="w-full h-auto rounded-lg">
+      <div class="text-[10px] text-gray-400 font-mono mt-1.5 text-center">Tissue-Specific Reproduction</div>
+    </div>
+  </div>
+
+  <div class="bg-gray-50 border border-gray-100 rounded-xl p-4 text-xs text-gray-600 leading-relaxed">
+    <strong>Distribution Takeaways:</strong> The prediction trend exhibits highly conservative boundaries; it perfectly captures sample rankings and major shifts but displays conservative performance on extreme tail responses due to biological noise. Grouping samples by mutation profile (e.g., <em>KRAS</em> mutant vs. wild-type) reveals a significant, reproducible shift in continuous $LN(IC_{50})$ distributions across multiple distinct tissue origins.
+  </div>
+</div>
+
+<div class="my-12 pt-8 border-t border-gray-100">
+  <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-2 flex items-center gap-2">
+    <i class="fa-solid fa-link text-teal-600"></i> High-Confidence Gene–Drug Interdependence
+  </h2>
+  <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+    By mapping statistical significance against effect direction, the following selected interactions represent major discovery avenues isolated by the integrated multi-omic framework:
+  </p>
+
+  <div class="border border-gray-100 rounded-2xl bg-white shadow-sm overflow-hidden my-6">
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="bg-gray-50 border-b border-gray-100 text-[11px] font-mono font-bold text-gray-500 uppercase tracking-wider">
+          <th class="p-4">Identified Gene</th>
+          <th class="p-4">Associated Compound</th>
+          <th class="p-4">Pipeline Functional Insight</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-50 text-xs text-gray-600">
+        <tr>
+          <td class="p-4 font-semibold text-gray-900">GLI1</td>
+          <td class="p-4 font-mono text-indigo-600">Remodelin</td>
+          <td class="p-4">Uncovers a potential high-sensitivity therapeutic axis, identifying an actionable target pocket.</td>
+        </tr>
+        <tr>
+          <td class="p-4 font-semibold text-gray-900">KRAS</td>
+          <td class="p-4 font-mono text-indigo-600">Mycophenolic acid</td>
+          <td class="p-4">Strictly context-specific relationship; therapeutic efficacy depends entirely on broader pathway states.</td>
+        </tr>
+        <tr>
+          <td class="p-4 font-semibold text-gray-900">RBM10</td>
+          <td class="p-4 font-mono text-indigo-600">Bicalutamide</td>
+          <td class="p-4 text-teal-700 font-medium">Exhibits a highly robust, reproducible statistical association indicating selective resistance patterns.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
@@ -276,6 +358,14 @@ importance: 4
   <div class="absolute right-4 bottom-4 opacity-5 text-9xl pointer-events-none hidden md:block">
     <i class="fa-solid fa-dna"></i>
   </div>
+</div>
+
+<div class="my-8 pt-4 border-t border-gray-100 text-xs text-gray-400 font-mono">
+  📁 Project References & Series Pipeline Hierarchy:
+  <ul class="list-disc pl-5 mt-2 space-y-1">
+    <li>Previous Milestone: <a class="text-indigo-600 hover:underline" href="{{ '/projects/project3_ml/' | relative_url }}">Project 3 — Tabular Machine Learning Core Systems</a></li>
+    <li>Source Code Repositories: <a class="text-indigo-600 hover:underline" href="https://github.com/davidvillafan96/gdsc-genomic-biomarker-discovery" target="_blank">Precision Discovery Codebase</a></li>
+  </ul>
 </div>
 
 ---
