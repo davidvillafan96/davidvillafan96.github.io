@@ -4,7 +4,7 @@ title: "Project 1: Comparative Genomics & Functional Feature Profiling for PGPR 
 description: "An Automated Unsupervised Pipeline Intersecting PLaBase Annotation Data, Z-score Feature Matrices, and Hierarchical Clustering to Predict Rhizosphere Colonization Success"
 bg_color: "#022c22"
 icon: "fa-solid fa-bacterium"
-importance: 1
+importance: 6
 ---
 
 <div class="mb-12 border-b border-gray-100 pb-8">
